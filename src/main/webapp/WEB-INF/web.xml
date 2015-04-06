@@ -24,6 +24,7 @@
         <servlet-name>default</servlet-name>
         <url-pattern>/resources/*</url-pattern>
         <url-pattern>/bootstrap/*</url-pattern>
+        <url-pattern>/jquery/*</url-pattern>
     </servlet-mapping>
 
     <!-- DispatcherServlet Config -->
