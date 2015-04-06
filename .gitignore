@@ -9,7 +9,4 @@ out/
 *.iml
 #.gitignore
 *~
-appcontext-mybatis-db.xml
-appcontext-mybatis.xml
-db-template.xml
 commit.sh
