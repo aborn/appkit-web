@@ -59,7 +59,7 @@ public class IndexController extends BaseController {
         }
 
         model.addAttribute("userList", userListInfo);
-        model.addAttribute("pageTitle", "POP工具首页");
+        model.addAttribute("pageTitle", "appkit");
         return "/common/index";
     }
 

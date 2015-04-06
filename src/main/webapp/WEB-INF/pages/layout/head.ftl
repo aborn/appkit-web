@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
             <li class="dropdown announcement">
-                <a href="/index.html">homepage</a>
+                <a href="/index.html">about</a>
             </li>
 
             <li class="dropdown appconfig apitools indextab android scoreconfig">
@@ -15,9 +15,10 @@
                 </a>
 
                 <ul class="dropdown-menu" aria-labelledby="AppConfig">
-                    <li><a href="/demo/get.html?name=%E4%B8%AD">demo paramter</a></li>
+                    <li><a href="/demo/get.html?name=%E4%B8%AD">get requset with paramter</a></li>
                     <li class="divider"></li>
-                    <li><a href="/demo/demo.html/cityid/1/name/appkit">dynamic uri</a></li>
+                    <li><a href="/demo/demo.html/name/appkit">dynamic uri with variable</a></li>
+                    <li><a href="/demo/db.html">use mysql database</a></li>
                 </ul>
             </li>
         </ul>
@@ -34,13 +35,15 @@
                 </ul>
             </li>
         <#else>
-            <a href="#" calss="brand">NULL</a>
+            <li class="dropdown">
+                <a href="#" class="siginup">Log in</a>
+            </li>
         </#if>
         </ul>
 
-        <ul class="nav pull-right navbar-right">
+        <ul class="nav navbar-right">
             <li class="navbar-right">
-                <a href="#"" class="brand">others</a>
+                <a href="https://github.com/aborn/appkit-web/fork"" class="brand"><i class="fa fa-code-fork"> </i> Fork</a>
             </li>
         </ul>
 

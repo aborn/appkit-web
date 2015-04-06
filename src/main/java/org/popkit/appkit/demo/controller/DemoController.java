@@ -1,5 +1,6 @@
 package org.popkit.appkit.demo.controller;
 
+import org.popkit.appkit.common.controller.BaseController;
 import org.popkit.appkit.demo.entity.BasicDo;
 import org.popkit.appkit.demo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +19,15 @@ import java.util.List;
  */
 @Controller
 @RequestMapping(value = "/demo")
-public class DemoController {
+public class DemoController extends BaseController {
+
     public DemoController() {}
 
     @Autowired
     private DemoService demoService;
 
     /**
-     * Uri Template(with parameters)
+     * Dynamic uri example
      * @param modelMap
      * @param name
      * @return
@@ -42,7 +44,7 @@ public class DemoController {
         }
 
         callBiz(modelMap, info, "示例页面");
-        return "demo";
+        return "demo/demo";
     }
 
     /**
@@ -51,11 +53,11 @@ public class DemoController {
      * @param nameInput
      * @return
      */
-    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    @RequestMapping(value = "/get.html", method = RequestMethod.GET)
     public String getWithParameters(@ModelAttribute("model")ModelMap modelMap,
                                     @RequestParam(value = "name", required = false)String nameInput) {
         callBiz(modelMap, "带参数的Get请求, name=" + nameInput, "demo");
-        return "demo";
+        return "demo/demo";
     }
 
     private void callBiz(ModelMap modelMap, String info, String pageTitle) {
