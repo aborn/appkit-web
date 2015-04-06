@@ -31,14 +31,13 @@ public class IndexController extends BaseController {
      */
     private static List<User> userList = new ArrayList<User>();
 
-    //Initialize the list with some data for index screen
+    // Initialize the list with some data for index screen
     static {
         userList.add(new User("用户名", "地址"));
     }
 
     /**
-     * Saves the static list of users in model and renders it
-     * via freemarker template.
+     * index.html controller mapper
      *
      * @param model
      * @return The index view (FTL)
@@ -61,7 +60,7 @@ public class IndexController extends BaseController {
 
         model.addAttribute("userList", userListInfo);
         model.addAttribute("pageTitle", "POP工具首页");
-        return "/ftl/indexbak";
+        return "common/index";
     }
 
     /**
