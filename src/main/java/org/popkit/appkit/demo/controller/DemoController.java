@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -58,6 +59,12 @@ public class DemoController extends BaseController {
                                     @RequestParam(value = "name", required = false)String nameInput) {
         callBiz(modelMap, "带参数的Get请求, name=" + nameInput, "demo");
         return "demo/demo";
+    }
+
+    @RequestMapping(value = "/db.html", method = RequestMethod.GET)
+    public String dbCallExample(@ModelAttribute("data") ArrayList<BasicDo> doList,
+                                @RequestParam(value = "id", required = false)Integer id) {
+        return "demo/db";
     }
 
     private void callBiz(ModelMap modelMap, String info, String pageTitle) {
