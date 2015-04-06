@@ -60,7 +60,7 @@ public class IndexController extends BaseController {
 
         model.addAttribute("userList", userListInfo);
         model.addAttribute("pageTitle", "POP工具首页");
-        return "common/index";
+        return "/common/index";
     }
 
     /**
