@@ -25,7 +25,7 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="/resources/css/carousel.css" rel="stylesheet">
+    <link href="/local/carousel.css/css/carousel.css" rel="stylesheet">
 </head>
 <!-- NAVBAR
 ================================================== -->

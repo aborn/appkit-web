@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
+ * Uri start with /demo/*
+ *
  * @author guobao.jiang
  * @date 3/12/15
  * @time 11:27 PM

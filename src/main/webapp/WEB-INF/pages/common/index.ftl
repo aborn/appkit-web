@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>${model["pageTitle"]}</title>
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
-    <link href="/resources/css/appkit-theme.css" rel="stylesheet" media="screen" />
+<#include "/common/common-css.ftl" />
 </head>
 <body>
 
 <div>
+<#include "/layout/head.ftl" />
     <div id="header">
         <h2>
             <a href="http://viralpatel.net"><img height="37" width="37" border="0px"
@@ -47,5 +47,8 @@
 
     </div>
 </div>
+
+<#include "/layout/foot.ftl" />
+<#include "/common/common-js.ftl" />
 </body>
 </html>
