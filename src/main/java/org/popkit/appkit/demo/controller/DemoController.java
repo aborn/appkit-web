@@ -29,29 +29,30 @@ public class DemoController extends BaseController {
 
     /**
      * Dynamic uri example
-     * @param modelMap
-     * @param name
-     * @return
+     * @param modelMap variable to view layer
+     * @param name dynamic variable
+     * @return ftl page
      */
     @RequestMapping(value = "/demo.html/name/{name}", method = RequestMethod.GET)
     public String dynamicUriExample(@ModelAttribute("model")ModelMap modelMap,
                                     @PathVariable String name) {
         String info = "Hello world!";
-        info +=  " The dynamic value of name is" + name;
+        info +=  " The dynamic value of name is " + name;
         buildDemoPageContent(modelMap, info, "demo web page");
         return "demo/demo";
     }
 
     /**
      * Get request with parameter
-     * @param modelMap
-     * @param nameInput
+     * @param modelMap variable to view layer
+     * @param nameInput get request parameter
      * @return
      */
     @RequestMapping(value = "/get.html", method = RequestMethod.GET)
     public String getWithParameters(@ModelAttribute("model")ModelMap modelMap,
                                     @RequestParam(value = "name", required = false)String nameInput) {
-        buildDemoPageContent(modelMap, "带参数的Get请求, name=" + nameInput, "demo");
+        buildDemoPageContent(modelMap, "Http get request with parameter, name=" + nameInput,
+                "demo get request");
         return "demo/demo";
     }
 
