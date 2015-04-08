@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>demo</title>
+    <title>${model["pageTitle"]}</title>
 <#include "/common/common-css.ftl" />
 </head>
 <body>
