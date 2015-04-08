@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.popkit.appkit.demo.mapper.DemoMapper" >
-<resultMap id="resultDemo" type="org.popkit.appkit.demo.entity.BasicDo">
+<resultMap id="resultDemo" type="org.popkit.appkit.demo.entity.UserInfoDo">
     <result column="id" property="id" />
     <result column="name" property="name" />
     <result column="address" property="address" />
 </resultMap>
 
-    <insert id="insert" parameterType="org.popkit.appkit.demo.entity.BasicDo" >
-        insert into appkit_demo (name, address)
-        values ( #{name,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR} )
+    <insert id="insert" parameterType="org.popkit.appkit.demo.entity.UserInfoDo" >
+        INSERT INTO appkit_demo (name, address)
+        VALUES ( #{name,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR} )
     </insert>
 
     <select id="listAllUsersInfo" resultMap="resultDemo">
-        select * from appkit_demo;
+        SELECT * FROM appkit_demo;
+    </select>
+
+    <select id="getUserInfo" parameterType="int" resultMap="resultDemo">
+        SELECT * from appkit_demo
+        WHERE id = #{id,jdbcType=INT}
     </select>
 </mapper>

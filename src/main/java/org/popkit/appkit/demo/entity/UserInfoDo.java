@@ -1,16 +1,24 @@
 package org.popkit.appkit.demo.entity;
 
+import java.io.Serializable;
+
 /**
- * @author guobao.jiang
- * @date 3/15/15
- * @time 4:05 PM
+ * Author: aborn.jiang
+ * Email : aborn.jiang AT foxmail.com
+ * Date  : 4/8/15
+ * Time  : 11:52 PM
  */
-public class BasicDo {
+public class UserInfoDo implements Serializable {
+
+    private static final long serialVersionUID = 2069195890284511289L;
+
     private Integer id;
     private String name;
     private String address;
 
-    public BasicDo() {
+    public UserInfoDo(String name, String address) {
+        this.name = name;
+        this.address = address;
     }
 
     public Integer getId() {
@@ -34,11 +42,6 @@ public class BasicDo {
     }
 
     public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public BasicDo(String name, String address) {
-        this.name = name;
         this.address = address;
     }
 }

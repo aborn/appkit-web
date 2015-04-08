@@ -1,6 +1,6 @@
 package org.popkit.appkit.demo.service;
 
-import org.popkit.appkit.demo.entity.BasicDo;
+import org.popkit.appkit.demo.entity.UserInfoDo;
 import org.popkit.appkit.demo.mapper.DemoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,16 +22,19 @@ public class DemoService {
     private DemoMapper demoMapper;
 
     public void insert() throws Exception {
-        demoMapper.insert(new BasicDo("" + new Random().nextInt(), "" + new Random().nextInt()));
+        demoMapper.insert(new UserInfoDo("" + new Random().nextInt(), "" + new Random().nextInt()));
         //demoMapper.insert(new Testing()); // this will throw an exception
     }
 
     public void insert(String name, String address) {
-        demoMapper.insert(new BasicDo(name, address));
+        demoMapper.insert(new UserInfoDo(name, address));
     }
 
-    public List<BasicDo> queryAllUsersInfo() {
+    public List<UserInfoDo> queryAllUsersInfo() {
         return demoMapper.listAllUsersInfo();
     }
 
+    public UserInfoDo queryUsersInfo(int userid) {
+        return demoMapper.getUserInfo(userid);
+    }
 }

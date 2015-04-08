@@ -1,6 +1,6 @@
 package org.popkit.appkit.demo.mapper;
 
-import org.popkit.appkit.demo.entity.BasicDo;
+import org.popkit.appkit.demo.entity.UserInfoDo;
 
 import java.util.List;
 
@@ -11,6 +11,7 @@ import java.util.List;
  * @time 4:00 PM
  */
 public interface DemoMapper {
-    public void insert(BasicDo basicDo);
-    List<BasicDo> listAllUsersInfo();
+    public void insert(UserInfoDo basicDo);
+    public UserInfoDo getUserInfo(int id);
+    List<UserInfoDo> listAllUsersInfo();
 }

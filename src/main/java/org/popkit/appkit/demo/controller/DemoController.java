@@ -1,7 +1,7 @@
 package org.popkit.appkit.demo.controller;
 
 import org.popkit.appkit.common.controller.BaseController;
-import org.popkit.appkit.demo.entity.BasicDo;
+import org.popkit.appkit.demo.entity.UserInfoDo;
 import org.popkit.appkit.demo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -56,10 +56,20 @@ public class DemoController extends BaseController {
         return "demo/demo";
     }
 
+    /**
+     * DataBase operating example
+     * @param doList list result to view layer
+     * @param id query user id
+     * @return
+     */
     @RequestMapping(value = "/db.html", method = RequestMethod.GET)
-    public String dbCallExample(@ModelAttribute("data") ArrayList<BasicDo> doList,
+    public String dbCallExample(@ModelAttribute("data") ArrayList<UserInfoDo> doList,
                                 @RequestParam(value = "id", required = false)Integer id) {
-        List<BasicDo> allValues = demoService.queryAllUsersInfo();
+        List<UserInfoDo> allValues = null;
+        if (null == id) {
+            allValues = demoService.queryAllUsersInfo();
+        }
+
         //demoService.insert("aborn", "Shanghai");
         return "demo/db";
     }
