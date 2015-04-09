@@ -20,6 +20,25 @@
         </div>
 
         <div class="panel panel-default">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th class="col-md-2 text-center">ID</th>
+                    <th class="col-md-3 text-center">Name</th>
+                    <th class="col-md-7 text-center">Adress</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <#list data as user>
+                <tr>
+                    <td class="text-center">${user.id}</td>
+                    <td class="text-center">${user.name}</td>
+                    <td class="text-center">${user.address}</td>
+                </tr>
+                </#list>
+                </tbody>
+            </table>
         </div>
 
     </div>

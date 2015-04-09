@@ -3,6 +3,16 @@ body {
     padding-top: 70px
 }
 
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border-top: 3px solid #e5e5e5;
+    padding: 20px 0;
+    background-color: #f5f5f5;
+}
+
 .brand {
     padding-right: 0;
     padding-left: 0;
@@ -19,14 +29,4 @@ body {
 
 .siginup {
     margin-right: 15px;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid #e5e5e5;
-    padding: 20px 0;
-    background-color: #f5f5f5;
 }
