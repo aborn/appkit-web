@@ -71,8 +71,10 @@ public class DemoController extends BaseController {
         if (null == id) {
             allValues = demoService.queryAllUsersInfo();
             tabInfoDo.setSize(allValues.size());
+            doList.addAll(allValues);
         } else {
             UserInfoDo userInfoDo = demoService.queryUsersInfo(id);
+            doList.add(userInfoDo);
             tabInfoDo.setSize(1);
         }
 

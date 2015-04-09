@@ -16,10 +16,8 @@
         SELECT * FROM appkit_demo;
     </select>
 
-    <!--
     <select id="getUserInfo" parameterType="int" resultMap="resultDemo">
         SELECT * from appkit_demo
-        WHERE id = #{id,jdbcType=INT}
+        WHERE id = #{id}
     </select>
-    -->
 </mapper>

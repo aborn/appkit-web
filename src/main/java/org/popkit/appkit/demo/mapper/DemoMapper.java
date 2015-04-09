@@ -12,6 +12,6 @@ import java.util.List;
  */
 public interface DemoMapper {
     public void insert(UserInfoDo basicDo);
-    //public UserInfoDo getUserInfo(int id);
+    public UserInfoDo getUserInfo(int id);
     List<UserInfoDo> listAllUsersInfo();
 }
