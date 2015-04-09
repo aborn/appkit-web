@@ -9,6 +9,7 @@
 <#include "/layout/head.ftl" />
     <div class="container">
         <h2>MySql Database call example</h2>
+        <h3>Table size: ${tabinfo.size}</h3>
     </div>
 </div>
 

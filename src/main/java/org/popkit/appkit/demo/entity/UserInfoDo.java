@@ -16,6 +16,9 @@ public class UserInfoDo implements Serializable {
     private String name;
     private String address;
 
+    public UserInfoDo() {
+    }
+
     public UserInfoDo(String name, String address) {
         this.name = name;
         this.address = address;

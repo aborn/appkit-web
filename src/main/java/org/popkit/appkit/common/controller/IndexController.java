@@ -1,8 +1,8 @@
 package org.popkit.appkit.common.controller;
 
 import org.apache.commons.collections.CollectionUtils;
-import org.popkit.appkit.demo.entity.BasicDo;
 import org.popkit.appkit.demo.entity.User;
+import org.popkit.appkit.demo.entity.UserInfoDo;
 import org.popkit.appkit.demo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -44,12 +44,12 @@ public class IndexController extends BaseController {
      */
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
     public String index(@ModelAttribute("model") ModelMap model) {
-        List<BasicDo> allValues = demoService.queryAllUsersInfo();
+        List<UserInfoDo> allValues = demoService.queryAllUsersInfo();
         List<User> userListInfo = new ArrayList<User>();
 
         if (CollectionUtils.isNotEmpty(allValues)) {
             int index = 0;
-            for (BasicDo item : allValues) {
+            for (UserInfoDo item : allValues) {
                 userListInfo.add(new User(item));
             }
         }
@@ -58,7 +58,7 @@ public class IndexController extends BaseController {
             userListInfo.add(item);
         }
 
-        model.addAttribute("userList", userListInfo);
+        //model.addAttribute("userList", userListInfo);
         model.addAttribute("pageTitle", "appkit");
         return "/common/index";
     }
@@ -72,6 +72,7 @@ public class IndexController extends BaseController {
      */
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public ModelAndView add(@ModelAttribute("user") User user) {
+
         ModelAndView mv = new ModelAndView("redirect:/demo/get.html");
         if (null != user && null != user.getFirstname()
                 && null != user.getLastname()

@@ -1,6 +1,7 @@
 package org.popkit.appkit.demo.controller;
 
 import org.popkit.appkit.common.controller.BaseController;
+import org.popkit.appkit.demo.entity.TabInfoDo;
 import org.popkit.appkit.demo.entity.UserInfoDo;
 import org.popkit.appkit.demo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,10 +65,15 @@ public class DemoController extends BaseController {
      */
     @RequestMapping(value = "/db.html", method = RequestMethod.GET)
     public String dbCallExample(@ModelAttribute("data") ArrayList<UserInfoDo> doList,
+                                @ModelAttribute("tabinfo") TabInfoDo tabInfoDo,
                                 @RequestParam(value = "id", required = false)Integer id) {
         List<UserInfoDo> allValues = null;
         if (null == id) {
             allValues = demoService.queryAllUsersInfo();
+            tabInfoDo.setSize(allValues.size());
+        } else {
+            UserInfoDo userInfoDo = demoService.queryUsersInfo(id);
+            tabInfoDo.setSize(1);
         }
 
         //demoService.insert("aborn", "Shanghai");
