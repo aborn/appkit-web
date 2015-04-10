@@ -25,7 +25,8 @@
                 <tr>
                     <th class="col-md-2 text-center">ID</th>
                     <th class="col-md-3 text-center">Name</th>
-                    <th class="col-md-7 text-center">Adress</th>
+                    <th class="col-md-5 text-center">Adress</th>
+                    <th class="col-md-2 text-left">Operate</th>
                 </tr>
                 </thead>
 
@@ -35,6 +36,10 @@
                     <td class="text-center">${user.id}</td>
                     <td class="text-center">${user.name}</td>
                     <td class="text-center">${user.address}</td>
+                    <td class="text-left">
+                        <a class="btn btn-xs btn-primary">edit</a>
+                        <a class="btn btn-xs btn-danger">delete</a>
+                    </td>
                 </tr>
                 </#list>
                 </tbody>

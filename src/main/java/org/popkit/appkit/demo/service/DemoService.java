@@ -35,7 +35,6 @@ public class DemoService {
     }
 
     public UserInfoDo queryUsersInfo(int userid) {
-        return new UserInfoDo("a", "b");
-        //return demoMapper.getUserInfo(userid);
+        return demoMapper.getUserInfo(userid);
     }
 }
