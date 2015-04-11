@@ -16,6 +16,11 @@
             <div class="panel panel-body">
                 <h2>MySql Database call example</h2>
                 <h3>Table size: ${tabinfo.size}</h3>
+                <form>
+                    <input class="text-left" placeholder="input name"/>
+                    <input class="text-left" placeholder="input address"/>
+                    <button class="btn-primary">submit</button>
+                </form>
             </div>
         </div>
 
