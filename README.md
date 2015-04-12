@@ -16,12 +16,23 @@ MySQL
 ## JAVA
 Java 6+
 
-## INSTALL AND DEPLOY
+## INSTALL
 Please first modify file classpath:config/spring/appcontext-mybatis.xml   
 depend on you own database parameters.
+
+## DEPLOY
+Create a demo table in your database as follows
+```
+CREATE TABLE `appkit_demo` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `name` varchar(11) DEFAULT NULL COMMENT 'user name',
+  `address` varchar(30) DEFAULT NULL COMMENT 'user adress',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='appkit-web demo database';
+```
 
 ## CREATE DATE
 2015-03-15
 
 ## UPDATE
-2015-04-10
+2015-04-12
