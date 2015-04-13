@@ -1,5 +1,6 @@
 package org.popkit.appkit.demo.controller;
 
+import org.popkit.appkit.common.annotation.AuthorityPolicy;
 import org.popkit.appkit.common.controller.BaseController;
 import org.popkit.appkit.demo.entity.TabInfoDo;
 import org.popkit.appkit.demo.entity.UserInfoDo;
@@ -82,10 +83,11 @@ public class DemoController extends BaseController {
         return "demo/db";
     }
 
+    @AuthorityPolicy(scene = "db")
     @RequestMapping(value = "/addUser.html", method = RequestMethod.POST)
     public String dbSubmitExample(@ModelAttribute(value = "user") UserInfoDo userInfoDo) {
         if (userInfoDo != null) {
-            demoService.insert(userInfoDo.getName(), userInfoDo.getAddress());
+            //demoService.insert(userInfoDo.getName(), userInfoDo.getAddress());
         }
 
         return "redirect:/demo/db.html";
