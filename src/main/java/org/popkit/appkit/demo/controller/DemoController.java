@@ -93,6 +93,11 @@ public class DemoController extends BaseController {
         return "redirect:/demo/db.html";
     }
 
+    @RequestMapping(value = "/getJSON.html", method = RequestMethod.GET)
+    public void getJSONData() {
+        ;
+    }
+
     private void buildDemoPageContent(ModelMap modelMap, String info, String pageTitle) {
         modelMap.addAttribute("info", info);
         modelMap.addAttribute("pageTitle", pageTitle);
