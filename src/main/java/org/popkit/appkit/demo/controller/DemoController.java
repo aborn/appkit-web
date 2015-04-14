@@ -2,6 +2,8 @@ package org.popkit.appkit.demo.controller;
 
 import org.popkit.appkit.common.annotation.AuthorityPolicy;
 import org.popkit.appkit.common.controller.BaseController;
+import org.popkit.appkit.common.entity.ResponseJSON;
+import org.popkit.appkit.common.utils.ResponseUtils;
 import org.popkit.appkit.demo.entity.TabInfoDo;
 import org.popkit.appkit.demo.entity.UserInfoDo;
 import org.popkit.appkit.demo.service.DemoService;
@@ -10,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -94,8 +97,12 @@ public class DemoController extends BaseController {
     }
 
     @RequestMapping(value = "/getJSON.html", method = RequestMethod.GET)
-    public void getJSONData() {
-        ;
+    public void getJSONData(HttpServletResponse httpResponse) {
+        ResponseJSON responseJSON = new ResponseJSON();
+
+        responseJSON.setStatus(ResponseJSON.STATUS_SUCCESS);
+        responseJSON.setInfo("get success!");
+        ResponseUtils.renderJson(httpResponse, responseJSON.toJSONString());
     }
 
     private void buildDemoPageContent(ModelMap modelMap, String info, String pageTitle) {
