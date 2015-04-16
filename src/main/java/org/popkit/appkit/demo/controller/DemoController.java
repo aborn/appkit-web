@@ -96,6 +96,7 @@ public class DemoController extends BaseController {
         return "redirect:/demo/db.html";
     }
 
+    @AuthorityPolicy(scene = "null")
     @RequestMapping(value = "/getJSON.html", method = RequestMethod.GET)
     public void getJSONData(HttpServletResponse httpResponse) {
         ResponseJSON responseJSON = new ResponseJSON();

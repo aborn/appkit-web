@@ -19,6 +19,7 @@
                     <li class="divider"></li>
                     <li><a href="/demo/demo.html/name/appkit">dynamic uri with variable</a></li>
                     <li><a href="/demo/db.html">use mysql database</a></li>
+                    <li><a href="/demo/getJSON.html">get json result</a></li>
                 </ul>
             </li>
         </ul>
