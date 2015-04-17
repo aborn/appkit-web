@@ -21,6 +21,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
             if (authorityPolicy == null || authorityPolicy.scene().equalsIgnoreCase("null")) {
                 return true;
             } else {
+                response.getWriter().print("This user has no authority!");
                 return false;
             }
         } else {
