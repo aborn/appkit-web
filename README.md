@@ -14,17 +14,17 @@ The JavaEE web project uses following frameworks:
  5. [Font Awesome](http://fortawesome.github.io/Font-Awesome/) (Version: 4.3.0).  
  5. [Mybatis](https://mybatis.github.io/mybatis-3/) as database connection layer (Version: 3.2.8).  
 
-## DATABASE
+## Database
 MySQL
 
-## JAVA
+## Java
 Java 6+
 
-## INSTALL
+## Install
 Please first modify file classpath:config/spring/appcontext-mybatis.xml   
 depend on you own database parameters.
 
-## DEPLOY
+## Deploy
 Create a demo table in your database as follows
 ```
 CREATE TABLE `appkit_demo` (
@@ -35,8 +35,8 @@ CREATE TABLE `appkit_demo` (
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='appkit-web demo database';
 ```
 
-## CREATE DATE
+## Create date
 2015-03-15
 
-## UPDATE
+## Update
 2015-04-18
