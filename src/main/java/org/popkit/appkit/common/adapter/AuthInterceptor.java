@@ -18,12 +18,16 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         if (handler.getClass().isAssignableFrom(HandlerMethod.class)) {
             AuthorityPolicy authorityPolicy = ((HandlerMethod) handler).getMethodAnnotation(AuthorityPolicy.class);
-            if (authorityPolicy == null || authorityPolicy.scene().equalsIgnoreCase("null")) {
+            if (authorityPolicy == null || "null".equalsIgnoreCase(authorityPolicy.scene())) {
                 return true;
-            } else {
-                response.getWriter().print("This user has no authority!");
+            }
+
+            if ("db".equalsIgnoreCase(authorityPolicy.scene())) {
+                response.getWriter().print("This user has no authority adding value to database!");
                 return false;
             }
+
+            return true;
         } else {
             return true;
         }

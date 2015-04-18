@@ -67,7 +67,6 @@ public class DemoController extends BaseController {
      * @param id query user id
      * @return
      */
-    @AuthorityPolicy(scene = "db")
     @RequestMapping(value = "/db.html", method = RequestMethod.GET)
     public String dbCallExample(@ModelAttribute("data") ArrayList<UserInfoDo> doList,
                                 @ModelAttribute("tabinfo") TabInfoDo tabInfoDo,

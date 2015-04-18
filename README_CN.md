@@ -1,9 +1,8 @@
 appkit-web
 ========
 
-## Introduction
-The appkit-web is an spring mvc arch project, which use tha latest technology.  
-And use annotation as the authority policy when post submit.
+## 中文介绍
+appkit-web是一个SpringMVC项目，它采用了最新的Spring版本()
 
 ## Framework
 The JavaEE web project uses following frameworks:  
