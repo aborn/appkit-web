@@ -3,7 +3,8 @@ appkit-web
 
 ## 中文介绍
 appkit-web是一个SpringMVC项目，它采用了最新的Spring版本(4.1.1.RELEASE)。  
-该项目采用注释的方式解决权限问题，在用户点击提交的时候采用HandlerInterceptorAdapter进行拦截。[English Intro](README.md)
+该项目采用注释的方式解决权限问题，在用户点击提交的时候采用      
+HandlerInterceptorAdapter进行拦截。[English Intro.](README.md)
 
 ## 框架介绍
 该项目采用了以下框架:  
