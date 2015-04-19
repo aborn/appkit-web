@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -21,9 +22,16 @@ public class DemoService {
     @Autowired
     private DemoMapper demoMapper;
 
-    public void insert() throws Exception {
-        demoMapper.insert(new UserInfoDo("" + new Random().nextInt(), "" + new Random().nextInt()));
-        //demoMapper.insert(new Testing()); // this will throw an exception
+    /**
+     * Insert Random example
+     * @throws Exception
+     */
+    public void insert() {
+        try {
+            demoMapper.insert(new UserInfoDo("" + new Random().nextInt(), "" + new Random().nextInt()));
+        } catch (Exception e) {
+            // todo write log info
+        }
     }
 
     public void insert(String name, String address) {
@@ -31,10 +39,20 @@ public class DemoService {
     }
 
     public List<UserInfoDo> queryAllUsersInfo() {
-        return demoMapper.listAllUsersInfo();
+        try {
+            return demoMapper.listAllUsersInfo();
+        } catch (Exception e) {
+            // todo write log info
+            return Collections.EMPTY_LIST;
+        }
     }
 
     public UserInfoDo queryUsersInfo(int userid) {
-        return demoMapper.getUserInfo(userid);
+        try {
+            return demoMapper.getUserInfo(userid);
+        } catch (Exception e) {
+            // todo write log info
+            return null;
+        }
     }
 }
