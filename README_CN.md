@@ -36,6 +36,9 @@ CREATE TABLE `appkit_demo` (
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='appkit-web demo database';
 ```
 
+## 网上示例
+查看在线示例，请访问 [http://appkit.popkit.org](http://appkit.popkit.org)
+
 ## 项目启动时间
 2015-03-15
 

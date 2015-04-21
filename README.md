@@ -34,6 +34,8 @@ CREATE TABLE `appkit_demo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='appkit-web demo database';
 ```
+## Web demo
+Please visit demo [http://appkit.popkit.org](http://appkit.popkit.org)
 
 ## Create date
 2015-03-15
