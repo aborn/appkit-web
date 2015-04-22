@@ -15,10 +15,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
  */
 @Controller
 public class BaseController {
+    public static int pv = 0;
 
     @ModelAttribute
     public void initPageParams(@ModelAttribute("page")PageInfoVo pageInfoVo) {
         pageInfoVo.setPageTitle("appkit-web");
         pageInfoVo.setPageInfo("appkit-web");
+        pageInfoVo.setPv(BaseController.pv);
     }
 }

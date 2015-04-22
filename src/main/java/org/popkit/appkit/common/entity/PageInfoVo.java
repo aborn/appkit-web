@@ -10,6 +10,7 @@ public class PageInfoVo {
 
     private String pageTitle;
     private String pageInfo;
+    private int pv;
 
     public String getPageTitle() {
         return pageTitle;
@@ -25,5 +26,13 @@ public class PageInfoVo {
 
     public void setPageInfo(String pageInfo) {
         this.pageInfo = pageInfo;
+    }
+
+    public int getPv() {
+        return pv;
+    }
+
+    public void setPv(int pv) {
+        this.pv = pv;
     }
 }
