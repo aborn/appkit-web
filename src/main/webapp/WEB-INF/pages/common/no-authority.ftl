@@ -15,7 +15,7 @@
                 <h4>Error</h4>
             </div>
             <div class="panel-body">
-                <h5>This user desenot have authority for operating！</h5>
+                <h5 style="color: red">This user desenot have authority for operating！</h5>
             </div>
         </div>
     </div>

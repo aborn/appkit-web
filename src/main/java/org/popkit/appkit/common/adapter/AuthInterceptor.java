@@ -23,7 +23,8 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
             }
 
             if ("db".equalsIgnoreCase(authorityPolicy.scene())) {
-                response.getWriter().print("This user has no authority adding value to database!");
+                //response.getWriter().print("This user has no authority adding value to database!");
+                response.sendRedirect("/authority/error.html");
                 return false;
             }
 

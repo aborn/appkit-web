@@ -10,7 +10,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,23 +62,9 @@ public class IndexController extends BaseController {
         return "/common/index";
     }
 
-    /**
-     * Add a new user into static user lists and display the
-     * same into FTL via redirect
-     *
-     * @param user
-     * @return Redirect to /index page to display user list
-     */
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public ModelAndView add(@ModelAttribute("user") User user) {
-
-        ModelAndView mv = new ModelAndView("redirect:/demo/get.html");
-        if (null != user && null != user.getFirstname()
-                && null != user.getLastname()
-                && !user.getLastname().isEmpty()) {
-            mv.addObject("name", user.getLastname());
-        }    // Or URL encoding
-        return mv;
+    @RequestMapping(value = "/authority/error.html")
+    public String authorityError() {
+        return "common/no-authority";
     }
 
 }
