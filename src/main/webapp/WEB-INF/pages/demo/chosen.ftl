@@ -15,19 +15,21 @@
 
             <div class="panel panel-body">
 
-                <lable class="control-label pull-left">scene:</lable>
-                <div class="col-md-2">
-                    <select name="eleScene" class="form-control" id="eleScene">
-                        <option value="" >notlimit</option>
-                        <option value="北京">北京</option>
-                        <option value="上海">上海</option>
-                        <option value="广州">广州</option>
-                        <option value="上123">上123</option>
-                        <option value="苏州">苏州</option>
-                    </select>
-                </div>
+                <form method="post" action="/demo/chosen.html" id="chosenForm">
+                    <lable class="control-label pull-left">scene:</lable>
+                    <div class="col-md-3">
+                        <em>城市选择</em>
+                        <select name="cityChosen" data-placeholder="请选择城市" style="width:120px;" class="chosen-select" id="eleScene" multiple tabindex="5">
+                            <option value="" ></option>
+                            <option value="北京">北京</option>
+                            <option value="1">上海</option>
+                            <option value="广州">广州</option>
+                            <option value="上123">上123</option>
+                            <option value="苏州">苏州</option>
+                        </select>
+                    </div>
+                </form>
 
-                <h2><a name="optgroup-support" class="anchor" href="#optgroup-support">&lt;optgroup&gt; Support</a></h2>
                 <div class="side-by-side clearfix">
                     <div>
                         <em>Single Select with Groups</em>
@@ -141,6 +143,7 @@
             </div>
         </div>
 
+
         <div class="panel panel-default">
         </div>
     </div>
@@ -148,6 +151,24 @@
 
 <#include "/layout/foot.ftl" />
 <#include "/common/common-js.ftl" />
+<script src="/resources/chosen/chosen.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/pinyin.js" type="text/javascript"></script>
+<script type="text/javascript">
+    //$('.chosen-select').chosen();
+    $(".chosen-select").chosen({no_results_text: "没找到啦",
+        max_selected_options: 5,
+    disable_search_threshold: 5,      // 少于这个数则不显示搜索框
+        search_contains: true
+    });
+
+    /*
+    $(function () {
+        $('#chosenForm').change(function(data) {
+            $('#chosenForm').submit();
+        });
+    });
+    */
+</script>
 
 </body>
 </html>
