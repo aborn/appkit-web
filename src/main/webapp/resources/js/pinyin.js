@@ -68,11 +68,3 @@ function arrangePinYin(arr){
 
 //两端去空格函数
 String.prototype.trim = function() {    return this.replace(/(^\s*)|(\s*$)/g,""); }
-
-//查看拼音首字母缩写
-function query(){
-    var str = document.getElementById("txtChinese").value.trim();
-    if(str == "") return;
-    var arrRslt = getChineseFirstPinYin(str);
-    alert(arrRslt);
-}
