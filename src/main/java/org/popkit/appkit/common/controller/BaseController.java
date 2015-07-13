@@ -1,6 +1,7 @@
 package org.popkit.appkit.common.controller;
 
 import org.popkit.appkit.common.entity.PageInfoVo;
+import org.popkit.appkit.demo.entity.UserInfoDo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
@@ -22,5 +23,12 @@ public class BaseController {
         pageInfoVo.setPageTitle("appkit-web");
         pageInfoVo.setPageInfo("appkit-web");
         pageInfoVo.setPv(BaseController.pv);
+    }
+
+    @ModelAttribute
+    public UserInfoDo getUserInfo() {
+        UserInfoDo userInfoDo = new UserInfoDo();
+        userInfoDo.setName("aborn.jiang");
+        return userInfoDo;
     }
 }
