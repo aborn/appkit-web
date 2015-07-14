@@ -1,8 +1,11 @@
 package org.popkit.appkit.demo.entity;
 
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.alibaba.fastjson.JSONObject;
+
+
+
+
 
 /**
  * @author Aborn Jiang
@@ -31,18 +34,14 @@ public class FileInfo {
     }
 
     public String toJSONString() {
-        try {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("name", name);
-            jsonObject.put("size", size);
-            jsonObject.put("url", url);
-            jsonObject.put("thumbnailUrl", thumbnailUrl);
-            jsonObject.put("deleteUrl", deleteUrl);
-            jsonObject.put("deleteType", deleteType);
-            return jsonObject.toString();
-        } catch (JSONException e) {
-            return "";
-        }
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("name", name);
+        jsonObject.put("size", size);
+        jsonObject.put("url", url);
+        jsonObject.put("thumbnailUrl", thumbnailUrl);
+        jsonObject.put("deleteUrl", deleteUrl);
+        jsonObject.put("deleteType", deleteType);
+        return jsonObject.toString();
     }
 
     public String getName() {

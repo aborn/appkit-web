@@ -1,6 +1,7 @@
 package org.popkit.appkit.demo.controller;
 
-import org.json.JSONObject;
+
+import com.alibaba.fastjson.JSONObject;
 import org.popkit.appkit.common.controller.BaseController;
 import org.popkit.appkit.common.utils.FileUtils;
 import org.popkit.appkit.common.utils.ResponseUtils;
@@ -62,7 +63,6 @@ public class MultiFileController extends BaseController {
 
             //2.1 get next MultipartFile
             mpf = request.getFile(itr.next());
-            System.out.println(mpf.getOriginalFilename() +" uploaded! "+files.size());
 
             //2.2 if files > 10 remove the first from the list
             if(files.size() >= 10)
@@ -115,7 +115,7 @@ public class MultiFileController extends BaseController {
         }
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("files", imageFiles.toString());
+            jsonObject.put("files", imageFiles);
         } catch (Exception e) {
             //
         }

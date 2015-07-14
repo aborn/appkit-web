@@ -97,7 +97,6 @@
                         <i class="glyphicon glyphicon-trash"></i>
                         <span>Delete</span>
                     </button>
-                    <input type="checkbox" class="toggle">
                     <span class="fileupload-process"></span>
                 </div>
 

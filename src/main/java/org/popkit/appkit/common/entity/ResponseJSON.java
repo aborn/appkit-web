@@ -1,7 +1,7 @@
 package org.popkit.appkit.common.entity;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+
+import com.alibaba.fastjson.JSONObject;
 
 /**
  * Author: aborn.jiang
@@ -34,12 +34,8 @@ public class ResponseJSON {
 
     public String toJSONString() {
         JSONObject jsonObject = new JSONObject();
-        try {
-            jsonObject.put("status", status);
-            jsonObject.put("info", info);
-        } catch (JSONException e) {
-            // do nothing
-        }
+        jsonObject.put("status", status);
+        jsonObject.put("info", info);
         return jsonObject.toString();
     }
 
