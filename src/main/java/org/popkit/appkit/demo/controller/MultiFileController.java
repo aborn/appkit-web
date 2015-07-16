@@ -39,11 +39,6 @@ public class MultiFileController extends BaseController {
     LinkedList<FileInfo> files = new LinkedList<FileInfo>();
     FileInfo FileInfo = null;
 
-    @RequestMapping(value = "ajaxAddAppSkin.html")
-    public void ajaxAddAppSkin() {
-
-    }
-
     @RequestMapping(value = "multiFilesExample.html")
     public String multiFilesExample(HttpServletRequest request) {
         Map<String, String> searchMapVo = new HashMap<String, String>();
@@ -160,6 +155,7 @@ public class MultiFileController extends BaseController {
         }
     }
 
+    // 删除文件 
     @RequestMapping(value = "/delete/{value:.+}", method = RequestMethod.DELETE)
     public void deleteImage(@PathVariable String value,
                             HttpServletRequest request,
