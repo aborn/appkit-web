@@ -39,6 +39,21 @@ public class ResponseJSON {
         return jsonObject.toString();
     }
 
+    public static ResponseJSON getFailedResponse(String info) {
+        ResponseJSON responseJSON = new ResponseJSON();
+        responseJSON.setStatus(STATUS_FAILD);
+        responseJSON.setInfo(info);
+        return responseJSON;
+    }
+
+    public static ResponseJSON getSuccessResponse(String info) {
+        ResponseJSON responseJSON = new ResponseJSON();
+        responseJSON.setStatus(STATUS_SUCCESS);
+        responseJSON.setInfo(info);
+        return responseJSON;
+    }
+
+
     public String getStatus() {
         return status;
     }

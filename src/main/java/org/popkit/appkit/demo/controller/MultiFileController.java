@@ -2,7 +2,10 @@ package org.popkit.appkit.demo.controller;
 
 
 import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.lang.StringUtils;
 import org.popkit.appkit.common.controller.BaseController;
+import org.popkit.appkit.common.entity.ResponseJSON;
+import org.popkit.appkit.common.utils.AppKitUtils;
 import org.popkit.appkit.common.utils.FileUtils;
 import org.popkit.appkit.common.utils.ResponseUtils;
 import org.popkit.appkit.demo.entity.FileInfo;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import javax.activation.MimetypesFileTypeMap;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
@@ -122,16 +126,57 @@ public class MultiFileController extends BaseController {
         ResponseUtils.renderJson(response, jsonObject.toString());
     }
 
-    @RequestMapping(value = "/get/{value}", method = RequestMethod.GET)
-    public void get(HttpServletResponse response, @PathVariable String value){
-        FileInfo getFile = files.get(Integer.parseInt(value));
-        try {
-            response.setContentType(getFile.getType());
-            response.setHeader("Content-disposition", "attachment; filename=\""+getFile.getName()+"\"");
-            FileCopyUtils.copy(getFile.getBytes(), response.getOutputStream());
-        }catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+    // 支持文件名扩展
+    @RequestMapping(value = "/get/{value:.+}", method = RequestMethod.GET)
+    public void getImage(@PathVariable String value,
+                         HttpServletRequest request,
+                         HttpServletResponse response){
+        String rootPath = "/data/appdatas/";
+        String fileName = value;
+        String filePathName = rootPath + fileName;
+        if (!new File(filePathName).exists()) {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("info", "文件不存在");
+            ResponseUtils.renderJson(response, jsonObject.toJSONString());
+        } else {
+            try {
+                MimetypesFileTypeMap mimetypesFileTypeMap = new MimetypesFileTypeMap();
+                String contentType = AppKitUtils.getContentType(fileName);
+                if (StringUtils.isNotBlank(contentType)) {
+                    // 页面展示
+                    response.setContentType(contentType);
+                } else {
+                    // 变成下载模式
+                    response.setContentType(mimetypesFileTypeMap.getContentType(filePathName));
+                }
+                com.google.common.io.Files.copy(new File(filePathName), response.getOutputStream());
+                // 下面这句只能在 java 1.7 环境下用 java.nio.file
+                // response.getOutputStream().write(Files.readAllBytes(Paths.get(filePathName)));
+            } catch (IOException e) {
+                ResponseUtils.renderJson(response, ResponseJSON.getFailedResponse("异常").toJSONString());
+            } finally {
+                // do nothing
+            }
+        }
+    }
+
+    @RequestMapping(value = "/delete/{value:.+}", method = RequestMethod.DELETE)
+    public void deleteImage(@PathVariable String value,
+                            HttpServletRequest request,
+                            HttpServletResponse response){
+        JSONObject jsonObject = new JSONObject();
+        if (!new File(value).exists()) {
+            jsonObject.put("info", "文件不存在,不能删除!");
+            ResponseUtils.renderJson(response, jsonObject.toJSONString());
+        } else {
+            File f = new File(value);
+            boolean status = f.delete();
+            if (status) {
+                jsonObject.put("info", "删除文件:" + value + "成功!");
+            } else {
+                jsonObject.put("info", "删除文件:" + value + "失败!");
+            }
+            ResponseUtils.renderJson(response, jsonObject.toJSONString());
         }
     }
 }
