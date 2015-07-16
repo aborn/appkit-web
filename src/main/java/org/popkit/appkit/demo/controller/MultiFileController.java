@@ -155,7 +155,7 @@ public class MultiFileController extends BaseController {
         }
     }
 
-    // 删除文件 
+    // 删除文件操作
     @RequestMapping(value = "/delete/{value:.+}", method = RequestMethod.DELETE)
     public void deleteImage(@PathVariable String value,
                             HttpServletRequest request,
