@@ -21,6 +21,7 @@
                     <li><a href="/demo/db.html">use mysql database</a></li>
                     <li><a href="/demo/getJSON.html">get json result</a></li>
                     <li><a href="/demo/multifile/multiFilesExample.html">multi file update</a></li>
+                    <li><a href="/demo/editor.html">markdown editor</a></li>
                 </ul>
             </li>
         </ul>
