@@ -96,6 +96,11 @@ public class DemoController extends BaseController {
         return "redirect:/demo/db.html";
     }
 
+    @RequestMapping(value = "/editor.html")
+    public String editor() {
+        return "demo/editor";
+    }
+
     @AuthorityPolicy(scene = "null")
     @RequestMapping(value = "/getJSON.html", method = RequestMethod.GET)
     public void getJSONData(HttpServletResponse httpResponse) {
