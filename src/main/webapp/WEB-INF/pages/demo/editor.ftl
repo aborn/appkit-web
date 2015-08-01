@@ -12,6 +12,7 @@
 <#include "/layout/head.ftl" />
     <div class="container">
         <textarea></textarea>
+        <button class="btn-primary" id="save-content-button">保存</button>
     </div>
 </div>
 
@@ -20,6 +21,10 @@
 <script>
     var editor = new Editor();
     editor.render();
+    $('#save-content-button').on('click', function(){
+        var content = editor.codemirror.getValue();
+        console.log('content:' + content)
+    })
 </script>
 </body>
 </html>
