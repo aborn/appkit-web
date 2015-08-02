@@ -23,6 +23,13 @@
     editor.render();
     $('#save-content-button').on('click', function(){
         var content = editor.codemirror.getValue();
+        $.post("/demo/editorsumbitcontent.html",
+                {
+                    content : content
+                },function(data){
+                    console.log(data.info);
+                },
+                dataType="json")
         console.log('content:' + content)
     })
 </script>

@@ -101,6 +101,15 @@ public class DemoController extends BaseController {
         return "demo/editor";
     }
 
+    @RequestMapping(value = "/editorsumbitcontent.html")
+    public void editorSubmit(HttpServletResponse response,
+                             String content) {
+        ResponseJSON json = new ResponseJSON();
+        json.setInfo("success, content:" + content);
+        json.setStatus(ResponseJSON.STATUS_SUCCESS);
+        ResponseUtils.renderJson(response, json.toJSONString());
+    }
+
     @AuthorityPolicy(scene = "null")
     @RequestMapping(value = "/getJSON.html", method = RequestMethod.GET)
     public void getJSONData(HttpServletResponse httpResponse) {
