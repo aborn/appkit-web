@@ -9,13 +9,6 @@
         </layout>
     </appender>
 
-    <appender name="avatarAppender" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/data/applogs/appkit-web/logs/avatar.log" />
-        <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="[appkit-web]%d %-5p [%c] %m%n" />
-        </layout>
-    </appender>
-
     <appender name="appAppender" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="File" value="/data/applogs/appkit-web/logs/app.log" />
         <layout class="org.apache.log4j.PatternLayout">
@@ -30,39 +23,12 @@
         </layout>
     </appender>
 
-    <!--MAPI Log Framework -->
-    <appender name="apiBizAppender" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/data/applogs/appkit-web/apibiz.log" />
+    <appender name="appKitAppender" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/data/applogs/appkit-web/appkit.log" />
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="[%p][%d{HH:mm:ss}][%c]-[%m]%n" />
         </layout>
     </appender>
-
-    <appender name="apiDebugAppender" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/data/applogs/appkit-web/apidebug.log" />
-        <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="[%p][%d{HH:mm:ss}][%c]-[%m]%n" />
-        </layout>
-    </appender>
-
-    <appender name="apiSysAppender" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/data/applogs/appkit-web/apisys.log" />
-        <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="[%p][%d{HH:mm:ss}][%c]-[%m]%n" />
-        </layout>
-    </appender>
-
-    <appender name="sysErrorAppender" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/data/applogs/appkit-web/syserror.log" />
-        <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="[%p][%d{HH:mm:ss}][%c]-[%m]%n" />
-        </layout>
-    </appender>
-
-    <logger name="com.dianping.avatar" additivity="false">
-        <appender-ref ref="CONSOLE" />
-        <appender-ref ref="avatarAppender" />
-    </logger>
 
     <logger name="com.ibatis" additivity="false">
         <level value="WARN" />
@@ -95,19 +61,9 @@
         <appender-ref ref="appAppender" />
     </root>
 
-    <logger name="api-biz-monitor" additivity="false">
+    <logger name="appkit-monitor" additivity="false">
         <level value="INFO"/>
-        <appender-ref ref="apiBizAppender"/>
-    </logger>
-
-    <logger name="api-sys-monitor" additivity="false">
-        <level value="WARN"/>
-        <appender-ref ref="apiSysAppender"/>
-    </logger>
-
-    <logger name="sys-error-monitor" additivity="false">
-        <level value="ERROR"/>
-        <appender-ref ref="sysErrorAppender"/>
+        <appender-ref ref="appKitAppender"/>
     </logger>
 
 </log4j:configuration>

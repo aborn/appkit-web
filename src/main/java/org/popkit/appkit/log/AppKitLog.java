@@ -10,5 +10,9 @@ import org.slf4j.LoggerFactory;
  * @time 11:04 PM
  */
 public class AppKitLog {
-    Logger logger = LoggerFactory.getLogger(name);
+    private static final Logger logger = LoggerFactory.getLogger("appkit-monitor");
+
+    public static void info(String msg) {
+        logger.info(msg);
+    }
 }
