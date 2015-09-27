@@ -16,6 +16,6 @@ public class TimeController extends BaseController {
 
     @RequestMapping(value = "house.html")
     public String house() {
-
+        return "t/house";
     }
 }
