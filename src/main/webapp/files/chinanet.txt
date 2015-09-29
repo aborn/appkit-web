@@ -1,13 +1,17 @@
 ; Summary: Example Rule List for SwitchySharp
 ; Author: Aborn Jiang (aborn.jiang AT foxmail.com)
 ; Date: 2015-09-29
-; URL: http://samabox.com/projects/chrome/switchy/switchyrules.txt
+; URL: http://appkit.popkit.org/files/chinanet.txt
+; 注意: 这个列表是国内网络不走socket proxy的列表
 
 #BEGIN
 
 [Wildcard]
-*://chrome.google.com/*
-*baidu.com/*
-*dapenti.com/*
+*baidu.com*
+*dapenti.com*
+*jobbole.com*
+*dianping.com*
+*192.168.*
+*10.*
 
 #END
