@@ -1,0 +1,16 @@
+; Summary: Example Rule List
+; Author: Mhd Hejazi (my@email)
+; Date: 2010-01-20
+; URL: https://code.google.com/p/switchy/wiki/RuleList
+
+#BEGIN
+
+[Wildcard]
+*://chrome.google.com/*
+*://*.samabox.com/*
+
+[RegExp]
+^http://code\.google\.com/.*
+youtube
+
+#END

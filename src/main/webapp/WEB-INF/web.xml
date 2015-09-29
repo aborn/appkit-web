@@ -26,6 +26,7 @@
         <url-pattern>/bootstrap/*</url-pattern>
         <url-pattern>/jquery/*</url-pattern>
         <url-pattern>/chosen/*</url-pattern>
+        <url-pattern>/files/*</url-pattern>
     </servlet-mapping>
 
     <!-- DispatcherServlet Config -->

@@ -1,0 +1,13 @@
+; Summary: Example Rule List for SwitchySharp
+; Author: Aborn Jiang (aborn.jiang AT foxmail.com)
+; Date: 2015-09-29
+; URL: http://samabox.com/projects/chrome/switchy/switchyrules.txt
+
+#BEGIN
+
+[Wildcard]
+*://chrome.google.com/*
+*baidu.com/*
+*dapenti.com/*
+
+#END

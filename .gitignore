@@ -10,3 +10,4 @@ out/
 #.gitignore
 *~
 commit.sh
+*.swp
