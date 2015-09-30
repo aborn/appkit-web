@@ -41,7 +41,7 @@ public class DemoController extends BaseController {
     @RequestMapping(value = "/demo.html/name/{name}", method = RequestMethod.GET)
     public String dynamicUriExample(@ModelAttribute("model")ModelMap modelMap,
                                     @PathVariable String name) {
-        String info = "Hello world!";
+        String info = "Hello world!你好！";
         info +=  " The dynamic value of name is " + name;
         buildDemoPageContent(modelMap, info, "demo web page");
         return "demo/demo";
