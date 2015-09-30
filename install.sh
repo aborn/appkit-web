@@ -7,14 +7,14 @@ mvn compile
 mvn package -Dmaven.test.skip=ture
 
 # remove old file
-rm -rf ~/software/apache-tomcat-7.0.61/webapps/appkit-web
+rm -rf ${CATALINA_HOME}/webapps/appkit-web
 
 # use new war files
-cp -r target/appkit-web ~/software/apache-tomcat-7.0.61/webapps/
+cp -r target/appkit-web ${CATALINA_HOME}/webapps/
 
 # stop tomcat and start it
-~/software/apache-tomcat-7.0.61/bin/catalina.sh stop
+${CATALINA_HOME}/bin/catalina.sh stop
 #kill -9 `ps -ef |grep tomcat|grep -v grep|awk '{print $2}'`
-~/software/apache-tomcat-7.0.61/bin/catalina.sh start
+${CATALINA_HOME}/bin/catalina.sh start
 
 
