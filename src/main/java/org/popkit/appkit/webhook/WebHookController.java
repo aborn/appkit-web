@@ -2,6 +2,7 @@ package org.popkit.appkit.webhook;
 
 import com.alibaba.fastjson.JSONObject;
 import org.popkit.appkit.common.controller.BaseController;
+import org.popkit.appkit.common.entity.StatusEntity;
 import org.popkit.appkit.common.utils.ResponseUtils;
 import org.popkit.appkit.log.AppKitLog;
 import org.springframework.stereotype.Controller;
@@ -42,10 +43,10 @@ public class WebHookController extends BaseController {
         jsonObject.put("event", event == null ? "null" : event);
         jsonObject.put("ua", ua == null ? "null" : ua);
         jsonObject.put("signature", signature == null ? "null" : signature);
-        boolean isLegal = isLegalUser(event, ua, signature);
+        StatusEntity isLegal = isLegalUser(event, ua, signature);
         jsonObject.put("isLegal", isLegal);
 
-        if (isLegal) {
+        if (isLegal.isSuccess()) {
             doPopkitPushAction();
         }
 
@@ -64,11 +65,7 @@ public class WebHookController extends BaseController {
                 return;
             }
 
-            File fileLog = new File(homePath + "/log.txt");
-            if (!fileLog.exists()) {
-            }
-
-            String shellString = "/bin/bash " + shellFile + " &>" + homePath + "/log.txt";
+            String shellString = "/bin/bash " + shellFile;
             Process process = Runtime.getRuntime().exec(shellString);
             int exitValue = process.waitFor();
             if (0 != exitValue) {
@@ -81,14 +78,24 @@ public class WebHookController extends BaseController {
         }
     }
 
-    private boolean isLegalUser(String event, String ua, String signature) {
+    private StatusEntity isLegalUser(String event, String ua, String signature) {
         if (event == null || ua == null || signature == null) {
-            return false;
+            return StatusEntity.statusError("event ua signature is null");
         }
 
-        return "push".equals(event) &&
-                ua.startsWith("GitHub-Hookshot") &&
-                getLocalSignature().equals(signature);
+        if (!"push".equals(event)) {
+            return StatusEntity.statusError("error in event. event:" + event);
+        }
+
+        if (!ua.startsWith("GitHub-Hookshot")) {
+            return StatusEntity.statusError("error in ua. ua:" + ua);
+        }
+
+        if (!signature.startsWith("sha1=")) {
+            return StatusEntity.statusError("error in sha1:" + signature);
+        }
+
+        return StatusEntity.statusSuccess("success");
     }
 
     private static String getLocalSignature() {
