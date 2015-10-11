@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
 import java.io.FileNotFoundException;
 
 /**
@@ -44,9 +45,9 @@ public class WebHookController extends BaseController {
         boolean isLegal = isLegalUser(event, ua, signature);
         jsonObject.put("isLegal", isLegal);
 
-        if (isLegal) {
+        //if (isLegal) {
             doPopkitPushAction();
-        }
+        //}
 
         AppKitLog.info("popkit.push call. " + jsonObject.toJSONString());
         ResponseUtils.renderJson(response, jsonObject.toJSONString());
@@ -54,7 +55,30 @@ public class WebHookController extends BaseController {
 
     // 执行命令
     private void doPopkitPushAction() {
+        try {
+            String homePath = System.getProperty("user.home");
+            String shellFile = homePath + "/github/popkit/shell/popkit.sh";
+            File file = new File(shellFile);
+            if (!file.exists()) {
+                AppKitLog.info("shell file:" + shellFile + "doesnot exist!");
+                return;
+            }
 
+            File fileLog = new File(homePath + "/log.txt");
+            if (!fileLog.exists()) {
+            }
+
+            String shellString = "/bin/bash " + shellFile + " &>" + homePath + "/log.txt";
+            Process process = Runtime.getRuntime().exec(shellString);
+            int exitValue = process.waitFor();
+            if (0 != exitValue) {
+                AppKitLog.info("call shell " + shellString + " failed. error code is :" + exitValue);
+            } else {
+                AppKitLog.info("call shell " + shellString + " success. success code is :" + exitValue);
+            }
+        } catch (Throwable e) {
+            AppKitLog.info("call shell failed exception. " + e.getMessage());
+        }
     }
 
     private boolean isLegalUser(String event, String ua, String signature) {
