@@ -8,6 +8,7 @@ import org.apache.commons.lang.StringUtils;
  * @time 12:23 AM
  */
 public class AppKitUtils {
+
     public static String getContentType(String fileName) {
         if (StringUtils.isBlank(fileName)) {
             return "";
