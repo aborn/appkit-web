@@ -1,0 +1,13 @@
+language: java
+jdk:
+  - openjdk7
+  - oraclejdk7
+sudo: false
+before_script:
+  - echo $HOME
+script:
+  - mvn clean
+  - mvn compile
+  - mvn package -Dmaven.test.skip=ture
+after_script:
+  - ls -a
