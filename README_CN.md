@@ -1,5 +1,6 @@
 appkit-web
 ========
+[![Build Status](https://travis-ci.org/aborn/appkit-web.svg?branch=master)](https://travis-ci.org/aborn/appkit-web)  
 
 ## 中文介绍
 appkit-web是一个SpringMVC项目，它采用了最新的Spring版本(4.1.1.RELEASE)。  
@@ -43,4 +44,4 @@ CREATE TABLE `appkit_demo` (
 2015-03-15
 
 ## 最近更新时间
-2015-09-28
+2015-10-11

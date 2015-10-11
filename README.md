@@ -1,5 +1,6 @@
 appkit-web
 ========
+[![Build Status](https://travis-ci.org/aborn/appkit-web.svg?branch=master)](https://travis-ci.org/aborn/appkit-web)  
 
 ## Introduction
 The appkit-web is an spring mvc arch project, which use tha latest spring (4.1.1.RELEASE) technology.     
@@ -41,5 +42,5 @@ Please visit demo [http://appkit.popkit.org](http://appkit.popkit.org)
 2015-03-15
 
 ## Update
-2015-09-28
+2015-10-11
 
