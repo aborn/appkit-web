@@ -45,9 +45,9 @@ public class WebHookController extends BaseController {
         boolean isLegal = isLegalUser(event, ua, signature);
         jsonObject.put("isLegal", isLegal);
 
-        //if (isLegal) {
+        if (isLegal) {
             doPopkitPushAction();
-        //}
+        }
 
         AppKitLog.info("popkit.push call. " + jsonObject.toJSONString());
         ResponseUtils.renderJson(response, jsonObject.toJSONString());
