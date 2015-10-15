@@ -1,11 +1,6 @@
 package org.popkit.appkit.demo.entity;
 
-
 import com.alibaba.fastjson.JSONObject;
-
-
-
-
 
 /**
  * @author Aborn Jiang

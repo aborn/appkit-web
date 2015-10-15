@@ -18,10 +18,10 @@ import java.util.List;
 
 /**
  * Uri start with /demo/*
- *
- * @author guobao.jiang
- * @date 3/12/15
- * @time 11:27 PM
+ * Author: Aborn Jiang
+ * Email : aborn.jiang AT foxmail.com
+ * Date 3/12/15
+ * Time 11:27 PM
  */
 @Controller
 @RequestMapping(value = "/demo")
