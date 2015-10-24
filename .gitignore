@@ -5,9 +5,11 @@
 /.buildpath
 /.classpath
 /.idea
+/.sass-cache
 out/
 *.iml
-#.gitignore
 *~
 commit.sh
 *.swp
+/node_modules
+*.log
