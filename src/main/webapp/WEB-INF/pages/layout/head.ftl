@@ -28,27 +28,22 @@
                 </li>
             </ul>
 
-            <ul class="nav navbar-right pull-right">
-            <#if userInfo?exists && userInfo.userName ??>
+            <ul class="nav navbar-nav navbar-right pull-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" id="userInfo" data-toggle="dropdown"><i class="icon-cog"> </i>${userInfo.userName}
+                    <a class="dropdown-toggle" href="#" id="userInfo" data-toggle="dropdown"><i class="icon-cog"> </i>appkit
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="userInfo">
-                        <li><a href="#"><i class="icon-user-md"> </i>about me</a></li>
-                        <li><a href="${userInfo.logout}"><i class="icon-signout"> </i>sign out</a></li>
+                        <li><a href="#"><i class="icon-user-md"> </i>个人信息</a></li>
+                        <li><a href="/authority/list.html"><i class="icon-wrench"> </i>权限管理</a></li>
+                        <li><a href=""><i class="icon-signout"> </i>退出</a></li>
                     </ul>
                 </li>
-            <#else>
-                <li class="dropdown">
-                    <a href="#" class="siginup">Log in</a>
-                </li>
-            </#if>
             </ul>
 
-            <ul class="nav navbar-right">
+            <ul class="nav navbar-nav pull-right navbar-right">
                 <li class="navbar-right">
-                    <a href="https://github.com/aborn/appkit-web/fork"" class="brand"><i class="fa fa-code-fork"> </i> Fork</a>
+                    <a href="https://github.com/aborn/appkit-web/fork" class="brand"  style="color: Orange;"><i class="fa fa-code-fork"> </i> Fork</a>
                 </li>
             </ul>
         </div>

@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel='shortcut icon' type='image/x-icon' href='/assets/image/favicon.ico' />
 
     <!-- Site Properities -->
     <title>appkit</title>
@@ -24,13 +25,6 @@
                     $('.overlay').visibility({
                         type: 'fixed',
                         offset: 80
-                    });
-
-                    // lazy load images
-                    $('.image').visibility({
-                        type: 'image',
-                        transition: 'vertical flip in',
-                        duration: 500
                     });
 
                     // show dropdown on hover
@@ -102,11 +96,18 @@
 <div class="ui borderless main menu">
     <div class="ui text container">
         <div href="#" class="header item">
-            <img class="logo" src="/assets/images/favicon.ico">
+            <img class="logo" src="/assets/image/favicon.ico">
             <a href="/semantic/index.html">appkit</a>
         </div>
-        <a href="#" class="item">Blog</a>
-        <a href="#" class="item">Articles</a>
+        <a href="#" class="ui floated dropdown item">示例<i class="dropdown icon"></i>
+        <div class="menu">
+            <div class="item">Link Item</div>
+            <div class="item">Link Item</div>
+        </div>
+        </a>
+
+        <a href="/semantic/index.html" class="item">关于</a>
+
         <a href="#" class="ui right floated dropdown item">
             Dropdown <i class="dropdown icon"></i>
             <div class="menu">
