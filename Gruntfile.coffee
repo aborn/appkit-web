@@ -66,9 +66,6 @@ module.exports = (grunt) ->
     date = grunt.template.date(new Date(), 'yyyy-mm-dd');
     grunt.file.write("README.md", content + "\n" + date)
 
-  grunt.registerTask 'ui', 'install semantic ui to web', () ->
-    grunt.file.copy('node_modules/semantic-ui/dist', 'src/main/webapp/ui/semantic-ui/')
-
   grunt.registerTask 'default', ['preBuild', 'build', 'postBuild']
   grunt.registerTask 'build', ['copy','coffee', 'compass', 'uglify', 'cssmin']
   grunt.registerTask 'test',  ['coffee']

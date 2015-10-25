@@ -27,6 +27,8 @@
         <url-pattern>/jquery/*</url-pattern>
         <url-pattern>/chosen/*</url-pattern>
         <url-pattern>/files/*</url-pattern>
+        <url-pattern>/ui/*</url-pattern>
+        <url-pattern>/assets/*</url-pattern>
     </servlet-mapping>
 
     <!-- DispatcherServlet Config -->
