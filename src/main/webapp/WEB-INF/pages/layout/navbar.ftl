@@ -4,32 +4,30 @@
             <img class="logo" src="/assets/image/favicon.ico">
             <a href="/semantic/index.html">appkit</a>
         </div>
-        <a href="#" class="ui floated dropdown item">示例<i class="dropdown icon"></i>
-            <div class="menu">
-                <div class="item">Link Item</div>
-                <div class="item">Link Item</div>
+
+        <li class="ui floated dropdown item">
+            <div id="dropdown-demo">示例<i class="dropdown icon"></i>
             </div>
-        </a>
+            <ul class="menu">
+                <div class="item"><a href="/demo/get.html?name=%E4%B8%AD">get requset with paramter</a></div>
+                <div class="divider"></div>
+                <li class="item"><a href="/demo/demo.html/name/appkit">dynamic uri with variable</a></li>
+                <li class="item"><a href="/demo/db.html">use mysql database</a></li>
+                <li class="item"><a href="/demo/getJSON.html">get json result</a></li>
+                <li class="item"><a href="/demo/multifile/multiFilesExample.html">multi file update</a></li>
+                <li class="item"><a href="/demo/editor.html">markdown editor</a></li>
+            </ul>
+        </li>
 
         <a href="/semantic/index.html" class="item">关于</a>
 
-        <a href="#" class="ui right floated dropdown item">
-            Dropdown <i class="dropdown icon"></i>
+        <li class="ui right floated dropdown item">
+            <div>用户名</div>
             <div class="menu">
-                <div class="item">Link Item</div>
-                <div class="item">Link Item</div>
+                <div class="item"><a href="/index.html">首页</a></div>
                 <div class="divider"></div>
-                <div class="header">Header Item</div>
-                <div class="item">
-                    <i class="dropdown icon"></i>
-                    Sub Menu
-                    <div class="menu">
-                        <div class="item">Link Item</div>
-                        <div class="item">Link Item</div>
-                    </div>
-                </div>
-                <div class="item">Link Item</div>
+                <div class="item"><a href="index.html">退出</a></div>
             </div>
-        </a>
+        </li>
     </div>
 </div>
