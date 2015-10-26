@@ -1,8 +1,19 @@
 (function() {
-  var hello;
+  var $;
 
-  hello = function() {
-    return echo("hello");
-  };
+  $ = jQuery;
+
+  $(document).ready(function() {
+    $('.main.menu').visibility({
+      type: 'fixed'
+    });
+    $('.overlay').visibility({
+      type: 'fixed',
+      offset: 80
+    });
+    return $('.main.menu  .ui.dropdown').dropdown({
+      on: 'hover'
+    });
+  });
 
 }).call(this);
