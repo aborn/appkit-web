@@ -22,11 +22,11 @@
         <a href="/semantic/index.html" class="item">关于</a>
 
         <li class="ui right floated dropdown item">
-            <div>用户名</div>
+            <div><i class="user icon"></i>用户名</div>
             <div class="menu">
                 <div class="item"><a href="/index.html">首页</a></div>
                 <div class="divider"></div>
-                <div class="item"><a href="index.html">退出</a></div>
+                <div class="item"><a href="index.html"><i class="sign out icon"></i>退出</a></div>
             </div>
         </li>
     </div>
