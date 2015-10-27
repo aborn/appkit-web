@@ -2,7 +2,7 @@
     <div class="ui container">
         <div href="#" class="item">
             <img class="logo ak-logo" src="/assets/image/favicon.ico">
-            <a href="/semantic/index.html" class="ak-index-name">appkit</a>
+            <a href="/index.html" class="ak-index-name">appkit</a>
         </div>
 
         <li class="ui floated dropdown item">

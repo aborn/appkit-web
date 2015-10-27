@@ -1,34 +1,36 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>${model["pageTitle"]}</title>
-<#include "/common/common-css.ftl" />
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel='shortcut icon' type='image/x-icon' href='/assets/image/favicon.ico' />
+    <title>appkit</title>
+    <!-- Site Properities -->
+<#include "/common/semantic.ftl">
 </head>
 <body>
 
-<div>
-<#include "/layout/head.ftl" />
-    <div class="container">
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <h4>About appkit-web</h4>
-            </div>
-            <div class="panel-body">
-                <h5>The JavaEE web project uses following frameworks:</h5>
-                <ol>
-                    <li>Spring 4 MVC (Version: 4.1.1.RELEASE).</li>
-                    <li>Freemarker template engine (Version: 2.3.20).</li>
-                    <li>Bootstrap (Version: 3.3.2).</li>
-                    <li>jQuery (Version: 2.1.3)</li>
-                    <li>Mybatis as database connection layer (Version: 3.2.8).</li>
-                </ol>
-            </div>
-        </div>
-    </div>
+<#include "/layout/navbar.ftl"/>
+
+<div class="ui container" style="margin-top: 80px">
+
+    <h4>appkit-web</h4>
+
+    <h5>The JavaEE web project uses following frameworks:</h5>
+    <ol>
+        <li>Spring 4 MVC (Version: 4.1.1.RELEASE).</li>
+        <li>Freemarker template engine (Version: 2.3.20).</li>
+        <li>Bootstrap (Version: 3.3.2).</li>
+        <li>jQuery (Version: 2.1.3)</li>
+        <li>Mybatis as database connection layer (Version: 3.2.8).</li>
+    </ol>
+
+
 </div>
 
-<#include "/layout/foot.ftl" />
-<#include "/common/common-js.ftl" />
+<#include "/layout/copyright.ftl"/>
+
 </body>
 </html>
