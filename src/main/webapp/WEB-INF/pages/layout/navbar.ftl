@@ -1,7 +1,7 @@
 <div class="ui borderless main menu">
     <div class="ui container">
-        <div href="#" class="header item">
-            <img class="logo ak-log" src="/assets/image/favicon.ico">
+        <div href="#" class="item">
+            <img class="logo ak-logo" src="/assets/image/favicon.ico">
             <a href="/semantic/index.html" class="ak-index-name">appkit</a>
         </div>
 
