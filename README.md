@@ -15,6 +15,7 @@ HandlerInterceptorAdapter进行拦截。[English Intro.](README_EN.md)
  4. [jQuery](https://jquery.com/) 最流行的js库(Version: 2.1.3).    
  5. [Font Awesome](http://fortawesome.github.io/Font-Awesome/) 前端符号库(Version: 4.3.0).  
  5. [Mybatis](https://mybatis.github.io/mybatis-3/) 与数据库的链接层 (Version: 3.2.8).  
+ 6. [semantic-ui](http://semantic-ui.com/) 做为前端UI, bootstrap太重了。
 
 ## 数据库
 MySQL
