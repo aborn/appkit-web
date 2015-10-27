@@ -1,4 +1,4 @@
-<div class="ui borderless main menu">
+<div class="ui borderless main menu fixed">
     <div class="ui container">
         <div href="#" class="item">
             <img class="logo ak-logo" src="/assets/image/favicon.ico">
