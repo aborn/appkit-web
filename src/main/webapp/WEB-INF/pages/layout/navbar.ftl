@@ -1,8 +1,8 @@
 <div class="ui borderless main menu">
-    <div class="ui text container">
+    <div class="ui container">
         <div href="#" class="header item">
-            <img class="logo" src="/assets/image/favicon.ico">
-            <a href="/semantic/index.html">appkit</a>
+            <img class="logo ak-log" src="/assets/image/favicon.ico">
+            <a href="/semantic/index.html" class="ak-index-name">appkit</a>
         </div>
 
         <li class="ui floated dropdown item">
@@ -22,12 +22,16 @@
         <a href="/semantic/index.html" class="item">关于</a>
 
         <li class="ui right floated dropdown item">
-            <div><i class="user icon"></i>用户名</div>
+        <#if userInfo?exists && userInfo.userName ??>
+            <div class="user-dropdown"><i class="setting icon"></i>${userInfo.userName}<i class="dropdown icon"></i></div>
             <div class="menu">
-                <div class="item"><a href="/index.html">首页</a></div>
-                <div class="divider"></div>
-                <div class="item"><a href="index.html"><i class="sign out icon"></i>退出</a></div>
+                <div class="item"><a href="#" class="menu-item"><i class="user icon"></i>个人信息</a></div>
+                <div class="item"><a href="/authority/list.html" class="menu-item"><i class="privacy icon"></i>权限管理</a></div>
+                <div class="item"><a href="/logou" class="menu-item"><i class="sign out icon"></i>退出</a></div>
             </div>
+        <#else>
+            <div class="user-dropdown"><i class="setting icon"></i>未登录</div>
+        </#if>
         </li>
     </div>
 </div>

@@ -1,6 +1,8 @@
 package org.popkit.appkit.common.controller;
 
+import org.apache.commons.lang.StringUtils;
 import org.popkit.appkit.common.entity.PageInfoVo;
+import org.popkit.appkit.common.entity.UserInfoVo;
 import org.popkit.appkit.demo.entity.UserInfoDo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -25,10 +27,21 @@ public class BaseController {
         pageInfoVo.setPv(BaseController.pv);
     }
 
-    @ModelAttribute
     public UserInfoDo getUserInfo() {
         UserInfoDo userInfoDo = new UserInfoDo();
         userInfoDo.setName("aborn.jiang");
         return userInfoDo;
+    }
+
+    /**
+     * 获得用户相关的信息
+     * @param userInfo 返回给view层的登录用户信息
+     */
+    @ModelAttribute
+    public void initUserInfo(@ModelAttribute("userInfo") UserInfoVo userInfo) {
+        UserInfoDo userInfoDoLogin = this.getUserInfo();
+        String logout = "/logout.html";
+        logout = StringUtils.isBlank(logout) ? "#" : logout;
+        userInfo.setUserName(userInfoDoLogin.getName());
     }
 }

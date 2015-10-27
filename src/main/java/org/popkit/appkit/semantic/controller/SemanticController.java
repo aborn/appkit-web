@@ -1,5 +1,6 @@
 package org.popkit.appkit.semantic.controller;
 
+import org.popkit.appkit.common.controller.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping(value = "/semantic")
-public class SemanticController {
+public class SemanticController extends BaseController {
 
     @RequestMapping(value = "index.html")
     public String index() {

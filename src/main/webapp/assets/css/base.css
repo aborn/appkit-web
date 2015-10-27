@@ -19,7 +19,16 @@ body {
 }
 
 .ak-logo {
-  margin-right: 1.6em;
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+.menu-item {
+  color: black;
+}
+
+.user-dropdown {
+  color: #A25656;
 }
 
 .overlay {
@@ -43,6 +52,10 @@ body {
   left: 800px;
 }
 
+.ui.container {
+  width: 960px;
+}
+
 .text.container .left.floated.image {
   margin: 2em 2em 2em -4em;
 }
@@ -54,4 +67,17 @@ body {
 .ui.footer.segment {
   margin: 1em 0em 0em;
   padding: 2em 0em;
+}
+
+.ak-index-name {
+  color: #000000;
+  margin-left: 0px;
+  font-size: x-large;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.ak-search-box {
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
