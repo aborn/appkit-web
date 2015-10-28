@@ -1,4 +1,4 @@
-<div class="ui inverted vertical footer segment">
+<div class="ui inverted vertical footer segment" style="position: fixed;bottom: 0;width: 100%">
     <div class="ui center aligned container">
         <div class="seven wide column">
             <p class="text-muted"><a href="http://appkit.popkit.org/">appkit-web</a> 感谢 <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>、
