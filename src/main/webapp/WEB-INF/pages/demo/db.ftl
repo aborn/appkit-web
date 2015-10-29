@@ -1,12 +1,21 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>demo</title>
-<#include "/common/common-css.ftl" />
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel='shortcut icon' type='image/x-icon' href='/assets/image/favicon.ico' />
+    <title>appkit</title>
+    <!-- Site Properities -->
+<#include "/common/semantic.ftl">
 </head>
 <body>
-<div>
-<#include "/layout/head.ftl" />
+
+<#include "/layout/navbar.ftl"/>
+
+<div class="ui container ak-main-container">
+
     <div class="container">
         <div class="panel panel-info">
             <div class="panel panel-heading">
@@ -54,7 +63,6 @@
     </div>
 </div>
 
-<#include "/layout/foot.ftl" />
-<#include "/common/common-js.ftl" />
+<#include "/layout/copyright.ftl"/>
 </body>
 </html>
