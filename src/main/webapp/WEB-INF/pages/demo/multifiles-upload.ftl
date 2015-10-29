@@ -1,10 +1,14 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>App预览</title>
-<#include "/common/common-css.ftl" />
-<#include "/layout/head.ftl" />
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel='shortcut icon' type='image/x-icon' href='/assets/image/favicon.ico' />
+    <title>appkit</title>
+    <!-- Site Properities -->
+
     <style>
         #filelist {
             margin-top: 15px;
@@ -19,7 +23,6 @@
         }
     </style>
 
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <!-- Generic page styles -->
     <link rel="stylesheet" href="/bootstrap/jQuery-File-Upload-9.10.4/css/style.css">
     <!-- blueimp Gallery styles -->
@@ -27,12 +30,12 @@
     <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
     <link rel="stylesheet" href="/bootstrap/jQuery-File-Upload-9.10.4/css/jquery.fileupload.css">
     <link rel="stylesheet" href="/bootstrap/jQuery-File-Upload-9.10.4/css/jquery.fileupload-ui.css">
+<#include "/common/semantic.ftl">
 </head>
 
-
 <body>
-<div class="wrap">
-<#include "/layout/head.ftl" />
+<#include "/layout/navbar.ftl"/>
+<div class="ui container ak-main-container">
     <div class="container list-container">
         <!--api config列表显示-->
         <div class="panel panel-info">
@@ -54,7 +57,7 @@
                 </div>
                 <div id="uploadFilesButtonContainer">
                     <button type="button" id="uploadFilesButton"
-                            class="yui3-button" style="width:250px; height:35px;">上传</button>
+                            class="ui primary button" style="width:250px; height:35px;">上传</button>
                 </div>
                 <div id="overallProgress">
                 </div>
@@ -112,10 +115,8 @@
     </div>
 </div>
 
-<#include "/layout/foot.ftl" />
-<#include "/common/common-js.ftl" />
+<#include "/layout/copyright.ftl"/>
 <#include "/common/appkit-file-upload.ftl" />
-
 <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
 <!-- The template to display files available for upload -->
 
@@ -151,9 +152,9 @@
 
                 Y.each(fileList, function (fileInstance) {
                     fileTable.append("<tr id='" + fileInstance.get("id") + "_row" + "'>" +
-                    "<td class='filename'>" + fileInstance.get("name") + "</td>" +
-                    "<td class='filesize'>" + fileInstance.get("size") + "</td>" +
-                    "<td class='percentdone'>Hasn't started yet</td>");
+                            "<td class='filename'>" + fileInstance.get("name") + "</td>" +
+                            "<td class='filesize'>" + fileInstance.get("size") + "</td>" +
+                            "<td class='percentdone'>Hasn't started yet</td>");
                 });
             });
 
