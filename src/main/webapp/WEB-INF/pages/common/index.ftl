@@ -16,13 +16,13 @@
 
 <div class="ui container" style="margin-top: 80px">
 
-    <h4>appkit-web</h4>
+    <h2>appkit-web</h2>
 
     <h5>The JavaEE web project uses following frameworks:</h5>
     <ol>
+        <li>Semantic-UI (Version: 2.1.4).</li>
         <li>Spring 4 MVC (Version: 4.1.1.RELEASE).</li>
         <li>Freemarker template engine (Version: 2.3.20).</li>
-        <li>Bootstrap (Version: 3.3.2).</li>
         <li>jQuery (Version: 2.1.3)</li>
         <li>Mybatis as database connection layer (Version: 3.2.8).</li>
     </ol>
