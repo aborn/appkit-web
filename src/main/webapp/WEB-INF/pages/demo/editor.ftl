@@ -1,23 +1,30 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel='shortcut icon' type='image/x-icon' href='/assets/image/favicon.ico' />
     <title>markdown editor demo</title>
-<#include "/common/common-css.ftl" />
+    <!-- Site Properities -->
+<#include "/common/semantic.ftl">
     <link rel="stylesheet" href="http://lab.lepture.com/editor/editor.css" />
     <script type="text/javascript" src="http://lab.lepture.com/editor/editor.js"></script>
     <script type="text/javascript" src="http://lab.lepture.com/editor/marked.js"></script>
 </head>
+
 <body>
-<div>
-<#include "/layout/head.ftl" />
+<#include "/layout/navbar.ftl"/>
+
+<div class="ui container ak-main-container">
     <div class="container">
         <textarea></textarea>
-        <button class="btn-primary" id="save-content-button">保存</button>
+        <button class="ui primary button" id="save-content-button">保存</button>
     </div>
 </div>
 
-<#include "/layout/foot.ftl" />
-<#include "/common/common-js.ftl" />
+<#include "/layout/copyright.ftl"/>
 <script>
     var editor = new Editor();
     editor.render();
