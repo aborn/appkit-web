@@ -48,6 +48,7 @@ public class DemoController extends BaseController {
     }
 
     /**
+     * 只接受Get请求
      * Get request with parameter
      * @param modelMap variable to view layer
      * @param nameInput get request parameter

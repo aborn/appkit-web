@@ -14,7 +14,7 @@
 
 <#include "/layout/navbar.ftl"/>
 
-<div class="ui container" style="margin-top: 80px">
+<div class="ui container ak-main-container">
 
     <h2>appkit-web</h2>
 
