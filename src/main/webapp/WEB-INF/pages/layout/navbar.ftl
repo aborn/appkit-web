@@ -21,6 +21,8 @@
 
         <a href="/semantic/index.html" class="item">关于</a>
 
+        <a href="https://github.com/aborn/appkit-web/fork" class="item"><i class="fork icon"> </i>Fork</a>
+
         <li class="ui right floated dropdown item">
         <#if userInfo?exists && userInfo.userName ??>
             <div class="user-dropdown"><i class="setting icon"></i>${userInfo.userName}<i class="dropdown icon"></i></div>
