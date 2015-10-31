@@ -19,7 +19,8 @@
             </ul>
         </li>
 
-        <a href="/semantic/index.html" class="item">关于</a>
+        <a href="/semantic/index.html" class="item">semantic</a>
+        <a href="/semantic/semanticbox.html" class="item">semanticbox</a>
 
         <a href="https://github.com/aborn/appkit-web/fork" class="item"><i class="fork icon"> </i>Fork</a>
 

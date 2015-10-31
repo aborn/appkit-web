@@ -52,7 +52,7 @@
         },
         minCharacters : 1,
         error : {
-            noResults   : '没有找到任何城市！'
+            noResults   : '没有找到与之相关的城市！'
         },
         onSelect : function(result, response) {
             console.log("用户选择了：" + result.cityName);
