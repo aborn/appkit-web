@@ -13,16 +13,23 @@ public class CityInfo {
 
     private int cityId;
 
+    private String desc;
+
     public CityInfo(String cityName, int cityId) {
+        this(cityName, cityId, " 城市id:" + cityId);
+    }
+
+    public CityInfo(String cityName, int cityId, String desc) {
         this.cityName = cityName;
         this.cityId = cityId;
+        this.desc = desc;
     }
 
     public String toJSONString() {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cityName", cityName);
         jsonObject.put("cityId", cityId);
-        return jsonObject.toJSONString();
+        return JSONObject.toJSONString(this);
     }
 
     @Override
@@ -44,5 +51,13 @@ public class CityInfo {
 
     public void setCityId(int cityId) {
         this.cityId = cityId;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }

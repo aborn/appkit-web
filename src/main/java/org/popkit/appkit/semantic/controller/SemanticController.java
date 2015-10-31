@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -32,15 +33,39 @@ public class SemanticController extends BaseController {
     public void querycity(HttpServletRequest request,
                           String q,
                           HttpServletResponse response) {
-        List<CityInfo> examples = new ArrayList<CityInfo>();
-        examples.add(new CityInfo("上海", 2));
-        examples.add(new CityInfo("北京", 1));
-        examples.add(new CityInfo("beijing", 1));
-        examples.add(new CityInfo("shanghai", 1));
+        List<CityInfo> cityInfos = getCityList();
+        Iterator<CityInfo> infoIterator = cityInfos.iterator();
+        while (infoIterator.hasNext()) {
+            if (infoIterator.next().getCityName().contains(q)) {
+                continue;
+            } else {
+                infoIterator.remove();
+            }
+        }
 
         SearchResult<CityInfo> searchResult = new SearchResult<CityInfo>();
-        searchResult.setRecords(examples);
+        searchResult.setRecords(cityInfos);
 
         ResponseUtils.renderJson(response, searchResult.toString());
+    }
+
+    @RequestMapping(value = "citysubmit.html")
+    public String citySubmit(
+            HttpServletRequest request,
+            String cityName, String cityId) {
+        request.setAttribute("cityName", cityName);
+        request.setAttribute("info", "(城市名:" + cityName + ", 城市id:" + cityId + ")");
+        return "semantic/index";
+    }
+
+    private List<CityInfo> getCityList() {
+        List<CityInfo> examples = new ArrayList<CityInfo>();
+        examples.add(new CityInfo("北京", 1));
+        examples.add(new CityInfo("上海", 2));
+        examples.add(new CityInfo("上海浦东", 77));
+        examples.add(new CityInfo("广州", 3));
+        examples.add(new CityInfo("深圳", 4));
+        examples.add(new CityInfo("上饶", 87));
+        return examples;
     }
 }
