@@ -52,6 +52,10 @@ body {
   width: 960px;
 }
 
+.ui.container.index {
+  width: 1150px;
+}
+
 .text.container .left.floated.image {
   margin: 2em 2em 2em -4em;
 }
@@ -90,4 +94,28 @@ body {
 
 .ak-hidden {
   display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.ak-form-item {
+  padding-right: 15px;
+}
+
+.ak-form-label {
+  padding-right: 15px;
+}
+
+.panel-heading {
+  padding-top: 15px;
+}
+
+.panel-default {
+  padding-top: 15px;
+}
+
+.ak-content-container {
+  padding-top: 15px;
 }
