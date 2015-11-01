@@ -29,7 +29,7 @@
                     </div>
                     <div class="results"></div>
                 </div>
-                <input class="ak-hidden" value=<#if cityName??>"${cityName}"</#if> name="cityId" id="cityId">
+                <input class="ak-hidden" value=<#if cityName??>"${cityName}"</#if> name="cityId" id="cityId" />
                 <button class="ui teal button" type="submit">提交</button>
             </div>
         </form>
@@ -55,7 +55,7 @@
             noResults   : '没有找到与之相关的城市！'
         },
         onSelect : function(result, response) {
-            console.log("用户选择了：" + result.cityName);
+            console.log("用户选择了：" + result.cityName + "  cityId:" + result.cityId);
             $('#cityName').val(result.cityName);
             $('#cityId').val(result.cityId)
             $('#citySearchForm').submit();
