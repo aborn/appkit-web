@@ -29,7 +29,7 @@
                     </div>
                     <div class="results"></div>
                 </div>
-                <input class="ak-hidden" value=<#if cityName??>"${cityName}"</#if> name="cityId" id="cityId" />
+                <input class="ak-hidden" value=<#if cityName??>"${cityName}"<#else>""</#if> name="cityId" id="cityId" />
                 <button class="ui teal button" type="submit">提交</button>
             </div>
         </form>
