@@ -32,6 +32,16 @@
     <h4>2. 分为以下几种box</h4>
     <label>消息弹框</label>
     <button class="ui button" id="semanticboxinfo">消息</button>
+    <label>代码如下：</label>
+    <pre>
+        <code class="javascript">
+            $('#semanticboxinfo').on('click', function() {
+                semanticbox.info("消息弹框!", function() {
+                console.log("我是回调")
+                });
+            })
+        </code>
+    </pre>
 </div>
 
 <#include "/layout/copyright.ftl"/>
