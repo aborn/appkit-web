@@ -64,7 +64,9 @@
             widget_base_dimensions: [100, 55],
             resize: {
                 enabled: true
-            }
+            },
+        serialize_params:  function($w, wgd) {
+            return { col: wgd.col, row: wgd.row, size_x: wgd.size_x, size_y: wgd.size_y, number:wgd.number} }
         }).data('gridster');
 
         var widgets = [
@@ -85,10 +87,14 @@
             gridster.add_widget.apply(gridster, widget)
         });
 
+        var initialSize = 0;
+
         $('#addWidget').on('click', function() {
             console.log('addWidget clicked!')
-            var obj = gridster.add_widget('<li class="new"> <span class="ak-hidden delete-icon ak-delete-icon-pos"><i class="delete icon"></i></span> <h3>亲子</h3> <h5>送点读机</h5> <img src="http://www.dpfile.com/sc/eleconfig/20151109140555jiaoyu100x100.png"/> </li>', 2, 3);
+            var sizeOfLayoutItem = initialSize + 1;
+            var obj = gridster.add_widget('<li class="new layoutitem" data-number="'+sizeOfLayoutItem+'"><span class="ak-number-icon"><a class="ui violet circular label">'+sizeOfLayoutItem+'</a></span> <span class="ak-hidden delete-icon ak-delete-icon-pos"><i class="delete icon"></i></span> <h3>亲子</h3> <h5>送点读机</h5> <img src="http://www.dpfile.com/sc/eleconfig/20151109140555jiaoyu100x100.png"/> </li>', 2, 3);
             oneventAction();
+            initialSize = initialSize + 1;
             //console.log(obj);
         })
 

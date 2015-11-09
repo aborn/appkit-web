@@ -75,3 +75,12 @@ body {
     right: -8px;
     z-index: 20;
 }
+
+.ak-number-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -8px;
+    left: -8px;
+    z-index: 20;
+}
