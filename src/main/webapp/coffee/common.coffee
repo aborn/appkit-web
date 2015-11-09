@@ -14,3 +14,5 @@ $(document).ready(() ->
     on: 'hover'
   })
 )
+
+$(".ak-dropdown").dropdown();

@@ -9,11 +9,11 @@
     <title>appkit</title>
     <link rel="stylesheet" type="text/css" href="/thirdpart/gridster.js-0.5.6/dist/jquery.gridster.css">
     <link rel="stylesheet" type="text/css" href="/thirdpart/gridster.js-0.5.6/demo/demo.css">
-<#include "common/semantic.ftl"/>
+<#include "/common/semantic.ftl"/>
 </head>
 
 <body>
-<#include "layout/navbar.ftl"/>
+<#include "/layout/navbar.ftl"/>
 
 <div class="ui container ak-main-container">
     <div class="ak-search-box">

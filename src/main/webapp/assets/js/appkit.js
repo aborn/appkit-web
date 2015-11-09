@@ -16,4 +16,6 @@
     });
   });
 
+  $(".ak-dropdown").dropdown();
+
 }).call(this);
