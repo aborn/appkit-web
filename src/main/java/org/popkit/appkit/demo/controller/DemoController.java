@@ -1,9 +1,15 @@
 package org.popkit.appkit.demo.controller;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang.StringUtils;
 import org.popkit.appkit.common.annotation.AuthorityPolicy;
 import org.popkit.appkit.common.controller.BaseController;
 import org.popkit.appkit.common.entity.ResponseJSON;
 import org.popkit.appkit.common.utils.ResponseUtils;
+import org.popkit.appkit.demo.entity.LayoutItem;
+import org.popkit.appkit.demo.entity.Option;
 import org.popkit.appkit.demo.entity.TabInfoDo;
 import org.popkit.appkit.demo.entity.UserInfoDo;
 import org.popkit.appkit.demo.service.DemoService;
@@ -12,9 +18,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Uri start with /demo/*
@@ -26,6 +35,8 @@ import java.util.List;
 @Controller
 @RequestMapping(value = "/demo")
 public class DemoController extends BaseController {
+
+    private static final Map<String, List<LayoutItem>> demoStatic = new HashMap<String, List<LayoutItem>>();
 
     public DemoController() {}
 
@@ -125,5 +136,60 @@ public class DemoController extends BaseController {
         modelMap.addAttribute("info", info);
         modelMap.addAttribute("pageTitle", pageTitle);
         modelMap.addAttribute("class", this.getClass().toString());
+    }
+
+    @RequestMapping("/ele/ele.html")
+    public String demoEle(HttpServletRequest request, HttpServletResponse response) {
+        List<Option> selectLayouts = new ArrayList<Option>();
+        for (String layout : demoStatic.keySet()) {
+            selectLayouts.add(new Option(layout, layout));
+        }
+
+        request.setAttribute("selectLayouts", selectLayouts);
+        return "demo/ele/ele";
+    }
+
+    @RequestMapping("/ele/elesubmit.html")
+    public void demoSubmit(String layoutName, String layoutValue,
+                           HttpServletRequest request, HttpServletResponse response) {
+        ResponseJSON responseJSON = new ResponseJSON();
+        Object object = JSONArray.parse(layoutValue);
+        List<LayoutItem> result = new ArrayList<LayoutItem>();
+        for (int i=0; i<((JSONArray) object).size(); i++) {
+            JSONObject jsonObject = (JSONObject)(((JSONArray) object).get(i));
+            LayoutItem item = new LayoutItem(jsonObject);
+            result.add(item);
+        }
+
+        if (StringUtils.isNotBlank(layoutName) && (!demoStatic.containsKey(layoutName))) {
+            demoStatic.put(layoutName, result);
+        }
+        responseJSON.setStatus("success");
+        responseJSON.setInfo("成功");
+        ResponseUtils.renderJson(response, responseJSON.toJSONString());
+    }
+
+    @RequestMapping("/ele/getlayout.gson")
+    public void getLayoutGSON(String layoutName, HttpServletResponse response) {
+        JSONObject jsonObject = new JSONObject();
+
+
+        List<LayoutItem> result = demoStatic.get(layoutName);
+        if (CollectionUtils.isNotEmpty(result)) {
+            jsonObject.put("status", "success");
+            jsonObject.put("info", "has data");
+            JSONArray jsonArray = new JSONArray();
+            for (LayoutItem item : result) {
+                jsonArray.add(JSONObject.toJSON(item));
+            }
+            jsonObject.put("data", jsonArray);
+        } else {
+            jsonObject.put("status", "error");
+            jsonObject.put("info", "has not data");
+        }
+
+
+
+        ResponseUtils.renderJson(response, jsonObject.toJSONString());
     }
 }

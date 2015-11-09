@@ -29,6 +29,7 @@
         <url-pattern>/files/*</url-pattern>
         <url-pattern>/ui/*</url-pattern>
         <url-pattern>/assets/*</url-pattern>
+        <url-pattern>/thirdpart/*</url-pattern>
     </servlet-mapping>
 
     <!-- DispatcherServlet Config -->
