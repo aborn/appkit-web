@@ -91,7 +91,18 @@
 
         $('#addWidget').on('click', function() {
             console.log('addWidget clicked!')
-            var sizeOfLayoutItem = initialSize + 1;
+
+            var maxOrder = 0;
+            $.each($('.layoutitem'), function() {
+                var current = parseInt(this.getAttribute('data-number'));
+                if (current > maxOrder) {
+                    maxOrder = current;
+                }
+                console.log(' ' + this.getAttribute('data-number'))
+            })
+
+            var sizeOfLayoutItem = maxOrder + 1;
+
             var obj = gridster.add_widget('<li class="new layoutitem" data-number="'+sizeOfLayoutItem+'"><span class="ak-number-icon"><a class="ui violet circular label">'+sizeOfLayoutItem+'</a></span> <span class="ak-hidden delete-icon ak-delete-icon-pos"><i class="delete icon"></i></span> <h3>亲子</h3> <h5>送点读机</h5> <img src="http://www.dpfile.com/sc/eleconfig/20151109140555jiaoyu100x100.png"/> </li>', 2, 3);
             oneventAction();
             initialSize = initialSize + 1;
@@ -169,6 +180,13 @@
     var oneventAction = function () {
         $('.ak-delete-icon-pos').on('click', function(){
             gridster.remove_widget(this.parentElement, function(){
+                var orderIndex = 1;
+                $.each($('.layoutitem'), function() {
+                    this.setAttribute('data-number', orderIndex);
+                    $(this).find('.ak-number-icon .label').html(orderIndex)
+                    orderIndex = orderIndex + 1;
+                })
+
                 console.log('call back')
                 gridster.set_dom_grid_height();
                 gridster.set_dom_grid_width();
