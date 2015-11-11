@@ -164,6 +164,8 @@
         $('.ak-delete-icon-pos').on('click', function(){
             gridster.remove_widget(this.parentElement, function(){
                 console.log('call back')
+                gridster.set_dom_grid_height();
+                gridster.set_dom_grid_width();
             })
         })
 
