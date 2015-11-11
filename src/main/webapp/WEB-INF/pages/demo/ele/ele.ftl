@@ -162,7 +162,9 @@
 
     var oneventAction = function () {
         $('.ak-delete-icon-pos').on('click', function(){
-            gridster.remove_widget(this.parentElement)
+            gridster.remove_widget(this.parentElement, function(){
+                console.log('call back')
+            })
         })
 
         $('.new').on('mousemove', function(){
