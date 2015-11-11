@@ -13,6 +13,7 @@ public class LayoutItem {
     private int row;
     private int size_x;
     private int size_y;
+    private int order;
 
     public LayoutItem(JSONObject jsonObject) {
         this.col = jsonObject.getInteger("col");
@@ -51,5 +52,13 @@ public class LayoutItem {
 
     public void setSize_y(int size_y) {
         this.size_y = size_y;
+    }
+
+    public int getOrder() {
+        return order;
+    }
+
+    public void setOrder(int order) {
+        this.order = order;
     }
 }

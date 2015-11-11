@@ -65,8 +65,8 @@
             resize: {
                 enabled: true
             },
-        serialize_params:  function($w, wgd) {
-            return { col: wgd.col, row: wgd.row, size_x: wgd.size_x, size_y: wgd.size_y, number:wgd.number} }
+            serialize_params:  function($w, wgd) {
+                return { col: wgd.col, row: wgd.row, size_x: wgd.size_x, size_y: wgd.size_y, number:wgd.number} }
         }).data('gridster');
 
         var widgets = [
@@ -106,13 +106,19 @@
             } else {
                 console.log('save clicked!')
                 var obj = gridster.serialize();
+                var order = '';
+                $.each($('.layoutitem'), function() {
+                    order = order+ this.getAttribute('data-number') + ' ';
+                    console.log(' ' + this.getAttribute('data-number'))
+                })
 
                 $.ajax({
                     url: '/demo/ele/elesubmit.html',
                     type: 'POST',
                     data: {
                         layoutName: layoutName,
-                        layoutValue: JSON.stringify(obj)
+                        layoutValue: JSON.stringify(obj),
+                        order : order
                     },
                     dataType: 'json',
                     success: function (data) {
@@ -150,7 +156,7 @@
                 gridster.remove_all_widgets();
                 var serialization = data.data;
                 $.each(serialization, function() {
-                    gridster.add_widget('<li class="new"><span class="ak-hidden delete-icon ak-delete-icon-pos"><i class="delete icon"></i></span> <h3>亲子</h3> <h5>送点读机</h5> <img src="http://www.dpfile.com/sc/eleconfig/20151109140555jiaoyu100x100.png"/> </li>', this.size_x, this.size_y, this.col, this.row);
+                    gridster.add_widget('<li class="new"><span class="ak-number-icon"><a class="ui violet circular label">'+this.order+'</a></span><span class="ak-hidden delete-icon ak-delete-icon-pos"><i class="delete icon"></i></span> <h3>亲子</h3> <h5>送点读机</h5> <img src="http://www.dpfile.com/sc/eleconfig/20151109140555jiaoyu100x100.png"/> </li>', this.size_x, this.size_y, this.col, this.row);
                     oneventAction();
                 });
             },

@@ -150,14 +150,16 @@ public class DemoController extends BaseController {
     }
 
     @RequestMapping("/ele/elesubmit.html")
-    public void demoSubmit(String layoutName, String layoutValue,
+    public void demoSubmit(String layoutName, String layoutValue, String order,
                            HttpServletRequest request, HttpServletResponse response) {
         ResponseJSON responseJSON = new ResponseJSON();
+        String[] orderArr = order.split(" ");
         Object object = JSONArray.parse(layoutValue);
         List<LayoutItem> result = new ArrayList<LayoutItem>();
         for (int i=0; i<((JSONArray) object).size(); i++) {
             JSONObject jsonObject = (JSONObject)(((JSONArray) object).get(i));
             LayoutItem item = new LayoutItem(jsonObject);
+            item.setOrder(Integer.parseInt(orderArr[i]));
             result.add(item);
         }
 
