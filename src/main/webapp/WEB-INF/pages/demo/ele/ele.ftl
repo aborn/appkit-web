@@ -119,7 +119,7 @@
                 var obj = gridster.serialize();
                 var order = '';
                 $.each($('.layoutitem'), function() {
-                    order = order+ this.getAttribute('data-number') + ' ';
+                    order = order + this.getAttribute('data-number') + ' ';
                     console.log(' ' + this.getAttribute('data-number'))
                 })
 
