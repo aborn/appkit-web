@@ -29,7 +29,7 @@ public class BaseController {
 
     public UserInfoDo getUserInfo() {
         UserInfoDo userInfoDo = new UserInfoDo();
-        userInfoDo.setName("aborn.jiang");
+        userInfoDo.setName("Aborn Jiang");
         return userInfoDo;
     }
 

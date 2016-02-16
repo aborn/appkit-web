@@ -14,7 +14,7 @@
         <div class="ui tab segment cityTabSegment active" data-tab="most-visited">
             <div class="ui items">
 
-        <#list 1..20 as x>
+        <#list 1..26 as x>
             <div class="item">
                 <div class="content">
                     <label>城市组</label>
