@@ -9,7 +9,6 @@
     <link rel='shortcut icon' type='image/x-icon' href='/assets/image/favicon.ico' />
     <title>demo modal</title>
 <#include "/common/semantic.ftl"/>
-    <script src="/thirdpart/mithril.min/mithril.js"></script>
 </head>
 
 <body>
@@ -34,7 +33,7 @@
         e.preventDefault();
         console.log("clicked!");
         $('.cityModal').modal({
-            observeChanges : true,
+            observeChanges : false,
             closable  : false,
             onDeny    : function(){
                 //window.alert('Wait not yet!');
@@ -46,10 +45,6 @@
                 }).get();
                 $('#cityDemoInput').val(checkedValues.join(','));
                 //window.alert('Approved!');
-            },
-            cityTabSegment : {
-                active    : 'active',
-                scrolling : 'scrolling'
             }
         }).modal('show');
 
