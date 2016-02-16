@@ -10,7 +10,7 @@ And use annotation as the authority policy when post submit. [Chinese Intro, 中
 The JavaEE web project uses following frameworks:  
  1. [Spring](https://spring.io/) 4 MVC (Version: 4.1.1.RELEASE).    
  2. [Freemarker](http://freemarker.org/) template engine (Version: 2.3.20).  
- 3. [Bootstrap](http://getbootstrap.com/) (Version: 3.3.2).  
+ 3. [Semantic-UI](http://semantic-ui.com/) (Version: 2.1.4).  
  4. [jQuery](https://jquery.com/) (Version: 2.1.3).    
  5. [Font Awesome](http://fortawesome.github.io/Font-Awesome/) (Version: 4.3.0).  
  5. [Mybatis](https://mybatis.github.io/mybatis-3/) as database connection layer (Version: 3.2.8).  
@@ -42,5 +42,5 @@ Please visit demo [http://appkit.popkit.org](http://appkit.popkit.org)
 2015-03-15
 
 ## Update
-2015-10-15
+2016-02-16
 
