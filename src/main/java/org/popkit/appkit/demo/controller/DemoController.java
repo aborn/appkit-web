@@ -194,4 +194,9 @@ public class DemoController extends BaseController {
 
         ResponseUtils.renderJson(response, jsonObject.toJSONString());
     }
+
+    @RequestMapping("democity.html")
+    public String demoCity(HttpServletRequest request) {
+        return "demo/democity";
+    }
 }
