@@ -15,6 +15,7 @@
                 <a class="item" href="/demo/getJSON.html" class="menu-item"><span style="color: white">get json result</span></a>
                 <a class="item" href="/demo/multifile/multiFilesExample.html" class="menu-item"><span style="color: white">multi file update</span></a>
                 <a class="item" href="/demo/editor.html" class="menu-item"><span style="color: white">markdown editor</span></a>
+                <a class="item" href="/demo/democity.html" class="menu-item"><span style="color: white">demo modal</span></a>
             </div>
         </div>
 

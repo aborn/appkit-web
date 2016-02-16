@@ -22,8 +22,7 @@ MySQL
 Java 6+
 
 ## Install
-Please first modify file classpath:config/spring/appcontext-mybatis.xml   
-depend on you own database parameters.
+Firstly modify file classpath:config/spring/appcontext-mybatis.xml with your own database configuration.
 
 ## Deploy
 Create a demo table in your database as follows
@@ -35,6 +34,7 @@ CREATE TABLE `appkit_demo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='appkit-web demo database';
 ```
+
 ## Web demo
 Please visit demo [http://appkit.popkit.org](http://appkit.popkit.org)
 
