@@ -619,6 +619,85 @@
         </div>
     </div>
 
+    <div class="myfeed">
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+        <li>stuff</li>
+    </div>
+
     <div class="modal-content">
         <div style="margin:30px; min-height:1000px;">
             Long Content
@@ -681,6 +760,19 @@
             console.log('ddd onBottomVisible')
         },
         debug : true
+    });
+
+    $('.myfeed').visibility({
+        once: false,
+
+        // update size when new content loads
+        observeChanges: true,
+
+        // load content on bottom edge visible
+        onBottomVisible: function() {
+            console.log("infiniateScroll ... called.");
+            alert("infiniateScroll ... called.");
+        }
     });
 </script>
 </body>
