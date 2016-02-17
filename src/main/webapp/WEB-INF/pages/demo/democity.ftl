@@ -8,7 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel='shortcut icon' type='image/x-icon' href='/assets/image/favicon.ico' />
     <title>demo modal</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/city.css">
 <#include "/common/semantic.ftl"/>
+
 </head>
 
 <body>
@@ -23,18 +25,35 @@
             <button class="ui button" id="citySelectBtn">城市选择</button>
         </div>
     </form>
+
+    <div class="modal-content">
+        <div style="margin:30px; min-height:1000px;">
+            Long Content
+            <hr/>
+            <span class="modal-btn-close">hide me</span>
+        </div>
+    </div>
 </div>
 
 <#include "/layout/copyright.ftl"/>
 <script src="/assets/js/city.js"></script>
 
 <script>
+
+    $('.modal-btn').click(function(){
+        $('.modal-content').show();
+    });
+
+    $('.modal-btn-close').click(function(){
+        $('.modal-content').hide();
+    });
+
     $('#citySelectBtn').on("click", function(e){
         e.preventDefault();
         console.log("clicked!");
         $('.cityModal').modal({
             observeChanges : false,
-            closable  : false,
+            closable  : true,
             onDeny    : function(){
                 //window.alert('Wait not yet!');
                 //return false;

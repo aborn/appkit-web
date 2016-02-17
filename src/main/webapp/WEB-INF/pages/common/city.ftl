@@ -1,4 +1,4 @@
-<div class="ui modal cityModal">
+<div class="ui modal cityModal" style="position: fixed;">
     <i class="close icon"></i>
     <div class="header">
         城市选择
@@ -11,586 +11,593 @@
             <a class="item cityTab" data-tab="china-city">国内城市</a>
             <a class="item cityTab" data-tab="oversea-city">海外城市</a>
         </div>
-        <div class="ui tab segment cityTabSegment active" data-tab="most-visited">
-            <div class="ui items">
 
-        <#list 1..26 as x>
-            <div class="item">
-                <div class="content">
-                    <label>城市组</label>
-                    <div class="description">
-                        <div class="inline fileds">
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">国内全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
-                            <input type="checkbox" name="example">
-                            <label class="city-item-label">海外全部</label>
+        <div class="ui tab segment cityTabSegment active"  data-tab="most-visited">
+            <div class="ui items">
+                <div class="ui checkbox">
+                    <input type="checkbox" name="example">
+                    <label>全部分类</label>
+                </div>
+
+                <div style="max-height: 40vh; overflow-y:scroll;">
+                <#list 1..26 as x>
+                    <div class="item">
+                        <div class="content">
+                            <label>城市组</label>
+                            <div class="description">
+                                <div class="inline fileds">
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">国内全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                    <input type="checkbox" name="example">
+                                    <label class="city-item-label">海外全部</label>
+                                </div>
+                            </div>
+                            <div class="extra">
+                                <i class="green check icon"></i>
+                                121 Votes
+                            </div>
                         </div>
                     </div>
-                    <div class="extra">
-                        <i class="green check icon"></i>
-                        121 Votes
-                    </div>
+                </#list>
                 </div>
             </div>
-        </#list>
-           </div>
-       </div>
+        </div>
 
         <div class="ui tab segment cityTabSegment" data-tab="manual-add">
             <div class="ui top attached tabular menu">

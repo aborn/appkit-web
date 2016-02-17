@@ -1,0 +1,14 @@
+.modal-content{
+    overflow-y:scroll;
+    display:none;
+    position:fixed;
+    top:0px; left:0px;
+    width:80%; height:80%;
+    margin-left: 10%;
+    margin-top:10%;
+    background-color:rgba(0,0,0,0.2);
+}
+
+.tab-content {
+    overflow-y:scroll;
+}
