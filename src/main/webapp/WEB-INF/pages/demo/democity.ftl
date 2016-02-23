@@ -48,18 +48,6 @@
                 </div>
             </div>
         </#list>
-
-            <h3 class="ui dividing center aligned header">Infinite Scroll Example</h3>
-            <p></p>
-            <div class="ui divider"></div>
-            <p></p>
-            <div class="ui divider"></div>
-            <p></p>
-            <div class="ui divider"></div>
-            <p></p>
-            <div class="ui divider"></div>
-            <h3 class="ui header">Loaded Content #1</h3><p></p><p></p><p></p><h3 class="ui header">Loaded Content #2</h3><p></p><p></p><p></p><h3 class="ui header">Loaded Content #3</h3><p></p><p></p><p></p><h3 class="ui header">Loaded Content #4</h3><p></p><p></p><p></p><div class="ui large centered inline text loader">
-            Adding more content...
         </div>
         </div>
     </div>
