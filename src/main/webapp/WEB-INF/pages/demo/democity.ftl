@@ -95,7 +95,24 @@
         m("div", {class:'inline fields'},
                 m("input", {id:'demoAinput'})))
     }
-    m.mount(document.getElementById("mithrilDemoAContentArea"), mithril.demoA);
+    m.render(document.getElementById("mithrilDemoAContentArea"), mithril.demoA);
+    $('#mithrilDemoABtn').on("click", function(e){
+        e.preventDefault()
+        console.log('mithrilDemoABtn clicked!!')
+        $('#demoAinput').val('mithrilDemoABtn clicked!!2')
+    })
+
+    mithril.demoB = {};
+    mithril.demoB.view = function() {
+        return m("form", {class:'ui form'},
+                m("div", {class:'inline fields'},
+                        m("input", {id:'demoBinput'})))
+    }
+
+    $('#mithrilDemoBBtn').on("click", function(e) {
+        e.preventDefault()
+        m.mount(document.getElementById("mithrilDemoBContentArea"), mithril.demoA);
+    })
 
     $('#citySelectBtn').on("click", function(e){
         e.preventDefault();
