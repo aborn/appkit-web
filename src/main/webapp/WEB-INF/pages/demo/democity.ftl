@@ -62,11 +62,23 @@
         <li>stuff</li>
     </div>
 
-    <div class="modal-content">
-        <div style="margin:30px; min-height:1000px;">
-            Long Content
-            <hr/>
-            <span class="modal-btn-close">hide me</span>
+    <form class="ui form">
+        <div class="inline fields">
+
+            <button class="ui button" id="mithrilDemoABtn">示例A</button>
+            <button class="ui button" id="mithrilDemoBBtn">示例B</button>
+        </div>
+    </form>
+
+    <div>
+        <label>显示区A</label>
+        <div id="mithrilDemoAContentArea">
+        </div>
+    </div>
+
+    <div>
+        <label>显示区A</label>
+        <div id="mithrilDemoBContentArea">
         </div>
     </div>
 </div>
@@ -75,14 +87,6 @@
 <script src="/assets/js/city.js"></script>
 
 <script>
-
-    $('.modal-btn').click(function(){
-        $('.modal-content').show();
-    });
-
-    $('.modal-btn-close').click(function(){
-        $('.modal-content').hide();
-    });
 
     $('#citySelectBtn').on("click", function(e){
         e.preventDefault();
@@ -135,7 +139,7 @@
         // load content on bottom edge visible
         onBottomVisible: function() {
             console.log("infiniateScroll ... called.");
-            alert("infiniateScroll ... called.");
+            //alert("infiniateScroll ... called.");
         }
     });
 </script>
