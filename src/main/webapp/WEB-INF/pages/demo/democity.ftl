@@ -84,9 +84,18 @@
 </div>
 
 <#include "/layout/copyright.ftl"/>
+<script src="/assets/js/mithril.js"></script>
 <script src="/assets/js/city.js"></script>
 
 <script>
+    var mithril = {};
+    mithril.demoA = {};
+    mithril.demoA.view = function() {
+        return m("form", {class:'ui form'},
+        m("div", {class:'inline fields'},
+                m("input", {id:'demoAinput'})))
+    }
+    m.mount(document.getElementById("mithrilDemoAContentArea"), mithril.demoA);
 
     $('#citySelectBtn').on("click", function(e){
         e.preventDefault();
