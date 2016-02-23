@@ -49,7 +49,6 @@
             </div>
         </#list>
         </div>
-        </div>
     </div>
 
     <div class="myfeed">
