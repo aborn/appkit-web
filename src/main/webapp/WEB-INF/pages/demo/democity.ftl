@@ -90,12 +90,26 @@
 <script>
     var mithril = {};
     mithril.demoA = {};
-    mithril.demoA.view = function() {
+    mithril.demoA.modal = {};
+
+
+    mithril.demoA.view = function(ctrl) {
         return m("form", {class:'ui form'},
-        m("div", {class:'inline fields'},
-                m("input", {id:'demoAinput'})))
+                m("div", {class:'inline fields'},
+                        m("input", {id:'demoAinput', value:ctrl.datamock.info})))
     };
-    m.render(document.getElementById("mithrilDemoAContentArea"), mithril.demoA);
+
+    $.get("/demo/demoMock.json", {}, function(data){
+        mithril.demoA.modal.dataMock = data;
+        mithril.demoA.controller = function() {
+            return {
+                datamock : data
+            }
+        };
+        m.render(document.getElementById("mithrilDemoAContentArea"), mithril.demoA);
+    });
+
+
     $('#mithrilDemoABtn').on("click", function(e){
         e.preventDefault();
         console.log('mithrilDemoABtn clicked!!');

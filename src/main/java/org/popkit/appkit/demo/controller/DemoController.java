@@ -20,10 +20,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * Uri start with /demo/*
@@ -198,5 +196,13 @@ public class DemoController extends BaseController {
     @RequestMapping("democity.html")
     public String demoCity(HttpServletRequest request) {
         return "demo/democity";
+    }
+
+    @RequestMapping("demoMock.json")
+    public void demoMock(HttpServletResponse response) {
+        JSONObject jsonObject = new JSONObject();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+        jsonObject.put("info", simpleDateFormat.format(new Date()));
+        ResponseUtils.renderJson(response, jsonObject.toJSONString());
     }
 }
