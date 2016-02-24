@@ -77,7 +77,7 @@
     </div>
 
     <div>
-        <label>显示区A</label>
+        <label>显示区B</label>
         <div id="mithrilDemoBContentArea">
         </div>
     </div>
@@ -91,7 +91,6 @@
     var mithril = {};
     mithril.demoA = {};
     mithril.demoA.modal = {};
-
 
     mithril.demoA.view = function(ctrl) {
         return m("form", {class:'ui form'},
@@ -113,7 +112,7 @@
     $('#mithrilDemoABtn').on("click", function(e){
         e.preventDefault();
         console.log('mithrilDemoABtn clicked!!');
-        $('#demoAinput').val('mithrilDemoABtn clicked!!2')
+        $('#demoAinput').val('mithrilDemoABtn clicked!!11')
     });
 
     mithril.demoB = {};
@@ -125,7 +124,7 @@
 
     $('#mithrilDemoBBtn').on("click", function(e) {
         e.preventDefault();
-        m.mount(document.getElementById("mithrilDemoBContentArea"), mithril.demoA);
+        m.mount(document.getElementById("mithrilDemoBContentArea"), mithril.demoB);
     });
 
     $('#citySelectBtn').on("click", function(e){
