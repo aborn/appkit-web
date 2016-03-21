@@ -8,10 +8,7 @@ import org.popkit.appkit.common.annotation.AuthorityPolicy;
 import org.popkit.appkit.common.controller.BaseController;
 import org.popkit.appkit.common.entity.ResponseJSON;
 import org.popkit.appkit.common.utils.ResponseUtils;
-import org.popkit.appkit.demo.entity.LayoutItem;
-import org.popkit.appkit.demo.entity.Option;
-import org.popkit.appkit.demo.entity.TabInfoDo;
-import org.popkit.appkit.demo.entity.UserInfoDo;
+import org.popkit.appkit.demo.entity.*;
 import org.popkit.appkit.demo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -203,6 +200,15 @@ public class DemoController extends BaseController {
         JSONObject jsonObject = new JSONObject();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
         jsonObject.put("info", simpleDateFormat.format(new Date()));
+        ResponseUtils.renderJson(response, jsonObject.toJSONString());
+    }
+
+    // test url: http://localhost:8080/demo/demoArg.json?id=1&name=aborn
+    @RequestMapping("demoArg.json")
+    public void demoArg(ArgReq req, HttpServletResponse response) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("status", "success");
+        jsonObject.put("info", req.toString());
         ResponseUtils.renderJson(response, jsonObject.toJSONString());
     }
 }

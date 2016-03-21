@@ -13,7 +13,11 @@
     <context:annotation-config/>
     <context:component-scan base-package="org.popkit.appkit" />
 
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven>
+        <mvc:argument-resolvers>
+            <bean id="arguementsHandler" class="org.popkit.appkit.common.adapter.ArgumentsHandler"></bean>
+        </mvc:argument-resolvers>
+    </mvc:annotation-driven>
 
     <mvc:interceptors>
         <!-- 国际化操作拦截器 如果采用基于（请求/Session/Cookie）则必需配置 -->
