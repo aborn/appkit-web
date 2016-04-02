@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+cd "$(dirname "$0")"
+cd ..
+
 # compile first
 mvn compile
 
