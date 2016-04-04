@@ -8,6 +8,6 @@
 <!--
 <script src="/ui/semantic-ui/dist/semantic.min.js"></script>
 -->
-<script src="http://oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
+
 <script src="/ui/semantic-ui/dist/components/dropdown.js"></script>
 <script src="/assets/js/appkit.js"></script>

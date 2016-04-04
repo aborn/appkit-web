@@ -10,4 +10,6 @@
     </div>
 </div>
 
+<script src="http://oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
+
 

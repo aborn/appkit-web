@@ -92,18 +92,6 @@
     }
 
     $(function(){
-        $('.am-slider-default').slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,    // 当前显示多少个
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,    //自动播放速度
-            variableWidth: true,
-            //fade: true
-        });
-
         timer()
     })
 </script>
