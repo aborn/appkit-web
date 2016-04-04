@@ -9,8 +9,10 @@
 
     <link rel="icon" type="image/png" href="/resources/image/favicon.ico">
     <link rel="icon" sizes="192x192" href="/resources/image/favicon.ico">
+    <!--
     <link rel="stylesheet" href="/resources/css/amazeui.min.css">
-    <link rel="stylesheet" href="/resources/css/amazeui.slick.min.css">
+    -->
+    <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.6.0/css/amazeui.min.css">
 </head>
 
 <body>
@@ -59,8 +61,13 @@
     </p>
 </footer>
 
+<!--
 <script src="/resources/js/jquery.min.js"></script>
-<script src="/resources/js/slick.min.js"></script>
+-->
+
+<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script src="http://cdn.amazeui.org/amazeui/2.6.0/js/amazeui.min.js"></script>
+
 <script type="text/javascript">
     function timer() {
         var ts = (new Date(2016, 11, 31, 0, 0, 0)) - (new Date()); //计算剩余的毫秒数，注意月分是从0开始的(11表示12月份)
