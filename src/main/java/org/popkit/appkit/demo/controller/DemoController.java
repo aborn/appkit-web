@@ -211,4 +211,9 @@ public class DemoController extends BaseController {
         jsonObject.put("info", req.toString());
         ResponseUtils.renderJson(response, jsonObject.toJSONString());
     }
+
+    @RequestMapping("demo.html")
+    public String demo() {
+        return "demo/demo";
+    }
 }
