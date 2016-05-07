@@ -12,7 +12,6 @@
 <body>
 <#include "/layout/navbar.ftl"/>
 <div class="ui container ak-main-container">
-    <button class="ui mini button blue" id="btnTest">test</button>
     <canvas id="myChart" width="400" height="400"></canvas>
 </div>
 
@@ -27,7 +26,7 @@
             labels: dataRes.labels,  //["January", "February", "March", "April", "May", "June", "July"],
             datasets: [
                 {
-                    label: "My First dataset",
+                    label: "hit",
                     fill: false,
                     lineTension: 0.1,
                     backgroundColor: "rgba(75,192,192,0.4)",
