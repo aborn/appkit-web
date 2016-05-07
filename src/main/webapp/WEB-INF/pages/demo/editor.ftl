@@ -9,7 +9,7 @@
     <title>markdown editor demo</title>
     <!-- Site Properities -->
 <#include "/common/semantic.ftl">
-    <link rel="stylesheet" href="http://lab.lepture.com/editor/editor.css" />
+    <link rel="stylesheet" href="https://lab.lepture.com/editor/editor.css" />
     <script type="text/javascript" src="https://lab.lepture.com/editor/editor.js"></script>
     <script type="text/javascript" src="https://lab.lepture.com/editor/marked.js"></script>
 </head>
