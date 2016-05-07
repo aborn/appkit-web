@@ -3,6 +3,7 @@
 cd "$(dirname "$0")"
 cd ..
 
+git pull
 # compile first
 mvn compile
 
