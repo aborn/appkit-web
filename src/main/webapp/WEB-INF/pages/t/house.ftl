@@ -9,10 +9,7 @@
 
     <link rel="icon" type="image/png" href="/resources/image/favicon.ico">
     <link rel="icon" sizes="192x192" href="/resources/image/favicon.ico">
-    <!--
-    <link rel="stylesheet" href="/resources/css/amazeui.min.css">
-    -->
-    <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.6.0/css/amazeui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/amazeui/2.6.2/css/amazeui.min.css">
 </head>
 
 <body>
@@ -61,12 +58,8 @@
     </p>
 </footer>
 
-<!--
-<script src="/resources/js/jquery.min.js"></script>
--->
-
-<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
-<script src="http://cdn.amazeui.org/amazeui/2.6.0/js/amazeui.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/amazeui/2.6.2/js/amazeui.min.js"></script>
 
 <script type="text/javascript">
     function timer() {

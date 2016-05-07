@@ -13,3 +13,4 @@ commit.sh
 *.swp
 /node_modules
 *.log
+src/main/webapp/local/
