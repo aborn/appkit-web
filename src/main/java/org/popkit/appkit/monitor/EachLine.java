@@ -10,6 +10,7 @@ import java.util.List;
  * 2016-05-07:22:24
  */
 public class EachLine {
+    private String label;
     private List<String> labels;
     private List<Integer> data;
 
@@ -37,5 +38,13 @@ public class EachLine {
     @Override
     public String toString() {
         return JSON.toJSONString(this);
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
     }
 }
