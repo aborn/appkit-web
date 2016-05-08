@@ -64,7 +64,7 @@ public class MonitorController extends BaseController {
 
         EachLine eachLine = new EachLine(labels, data);
         DateTime dateTime = getDateTime(timeValue);
-        AppkitLogger.info("before readLogFileContent");
+        AppkitLogger.info("before readLogFileContent, dateTime=" + timeValue);
         List<EachLogItem> logItems = readLogFileContent(dateTime);
         AppkitLogger.info("end readLogFileContent");
 
@@ -116,10 +116,12 @@ public class MonitorController extends BaseController {
             br = new BufferedReader(new FileReader(AppkitConfigActor.get(DEFAULT_SS_KEY)));
             String sCurrentLine;
             while ((sCurrentLine = br.readLine()) != null) {
-                EachLogItem item = new EachLogItem(sCurrentLine.substring(0,19), sCurrentLine);
-                DateTime thisLineDate = getDateTime(item.getTime());
-                if (thisLineDate.getDayOfYear() == dateTime.getDayOfYear()) {
-                    result.add(item);
+                if (StringUtils.isNotBlank(sCurrentLine) && sCurrentLine.length() > 19) {
+                    EachLogItem item = new EachLogItem(sCurrentLine.trim().substring(0, 19), sCurrentLine);
+                    DateTime thisLineDate = getDateTime(item.getTime());
+                    if (null != thisLineDate && thisLineDate.getDayOfYear() == dateTime.getDayOfYear()) {
+                        result.add(item);
+                    }
                 }
             }
         } catch (IOException e) {
