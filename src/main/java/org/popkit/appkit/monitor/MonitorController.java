@@ -48,7 +48,7 @@ public class MonitorController extends BaseController {
     }
 
     @RequestMapping(value = "ajaxss.json")
-    public void ajaxss(@RequestParam(value = "timeValue") String timeValue,
+    public void ajaxss(@RequestParam(value = "timeValue", defaultValue = "") String timeValue,
                        HttpServletResponse response) {
         if (StringUtils.isBlank(timeValue)) {
             timeValue = DEBUG_TIME; //DateTime.now().toString(LOG_DATE_FORMAT);
