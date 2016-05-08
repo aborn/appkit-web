@@ -41,8 +41,7 @@
         var ctx = document.getElementById("myChart");
         //var data = ;
         $.post("/monitor/ajaxss.json", {
-            timeValue: dateValue,
-            type : 'monitor'
+            timeValue: dateValue
         }, function (dataRes) {
             var data = {
                 labels: dataRes.labels,  //["January", "February", "March", "April", "May", "June", "July"],

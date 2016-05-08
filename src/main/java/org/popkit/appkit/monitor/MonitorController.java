@@ -51,7 +51,7 @@ public class MonitorController extends BaseController {
     public void ajaxss(@RequestParam(value = "timeValue", defaultValue = "") String timeValue,
                        HttpServletResponse response) {
         if (StringUtils.isBlank(timeValue)) {
-            timeValue = DEBUG_TIME; //DateTime.now().toString(LOG_DATE_FORMAT);
+            timeValue = DateTime.now().toString(LOG_DATE_FORMAT);
         } else {
             timeValue = timeValue + " 01:17:51";
         }
