@@ -2,27 +2,49 @@ package org.popkit.appkit.common.config;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.SystemUtils;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created by Aborn Jiang
  * Mail aborn.jiang@gmail.com
  * 2016-05-08:10:14
  */
+@Service
 public class AppkitConfigActor {
     private static final String CONFIG_FILE_UNIX = "/data/webapps/";
     private static final String CONFIG_FILE_WINDOWS = "D:/data/webapps/";
     private static final String APPKIT_CONFIG_FILE_NAME = "appkit.conf";
 
+    private static final String DEFAULT_LOG_FILE_NAME = "/Users/aborn/github/appkit-web/shadowsocks.lg";
+    private static final ConcurrentHashMap<String, String> config = new ConcurrentHashMap<String, String>();
+    private static final String DEFAULT_SS_KEY = "sslog";
+
+    @PostConstruct
+    private void init() {
+        Map<String, String> allConfigs = AppkitConfigActor.getConfigMap();
+        if (allConfigs.containsKey(DEFAULT_SS_KEY)) {
+            config.put(DEFAULT_SS_KEY, allConfigs.get(DEFAULT_SS_KEY));
+        } else {
+            config.put(DEFAULT_SS_KEY, DEFAULT_LOG_FILE_NAME);
+        }
+    }
+
     public static String getWebappsRoot() {
         return SystemUtils.IS_OS_WINDOWS ?
                 CONFIG_FILE_WINDOWS :
                 CONFIG_FILE_UNIX;
+    }
+
+    public static String get(String key) {
+        return config.get(key);
     }
 
     public static Map<String, String> getConfigMap() {

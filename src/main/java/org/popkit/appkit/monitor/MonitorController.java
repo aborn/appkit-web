@@ -36,20 +36,8 @@ public class MonitorController extends BaseController {
     private static final DateTimeFormatter DEFAULT_FORMAT = DateTimeFormat.forPattern("MM-dd HH:mm");
     private static final DateTimeFormatter SHORT_FORMAT = DateTimeFormat.forPattern("MM-dd HH:");
     private static final DateTimeFormatter LOG_DATE_FORMAT = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss"); //2015-09-11 01:17:51
-    private static final String DEFAULT_LOG_FILE_NAME = "/Users/aborn/github/appkit-web/shadowsocks.lo";
-    private static final String DEFAULT_SS_KEY = "sslog";
     private static final String DEBUG_TIME = "2015-09-11 01:17:51";
-    private static final ConcurrentHashMap<String, String> config = new ConcurrentHashMap<String, String>();
-
-    @PostConstruct
-    private void init() {
-        Map<String, String> allConfigs = AppkitConfigActor.getConfigMap();
-        if (allConfigs.containsKey(DEFAULT_SS_KEY)) {
-            config.put(DEFAULT_SS_KEY, allConfigs.get(DEFAULT_SS_KEY));
-        } else {
-            config.put(DEFAULT_SS_KEY, DEFAULT_LOG_FILE_NAME);
-        }
-    }
+    private static final String DEFAULT_SS_KEY = "sslog";
 
     @RequestMapping(value = "ss.html")
     public String ss(HttpServletRequest request) {
@@ -121,7 +109,7 @@ public class MonitorController extends BaseController {
         List<EachLogItem> result = new ArrayList<EachLogItem>();
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader(config.get(DEFAULT_SS_KEY)));
+            br = new BufferedReader(new FileReader(AppkitConfigActor.get(DEFAULT_SS_KEY)));
             String sCurrentLine;
             while ((sCurrentLine = br.readLine()) != null) {
                 EachLogItem item = new EachLogItem(sCurrentLine.substring(0,19), sCurrentLine);
