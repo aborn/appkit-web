@@ -8,6 +8,7 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.popkit.appkit.common.config.AppkitConfigActor;
 import org.popkit.appkit.common.controller.BaseController;
+import org.popkit.appkit.common.log.AppkitLogger;
 import org.popkit.appkit.common.utils.ResponseUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -119,6 +120,7 @@ public class MonitorController extends BaseController {
                 }
             }
         } catch (IOException e) {
+            AppkitLogger.error("error", e);
             e.printStackTrace();
         } finally {
             try {

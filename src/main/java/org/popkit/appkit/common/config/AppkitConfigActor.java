@@ -2,6 +2,7 @@ package org.popkit.appkit.common.config;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.SystemUtils;
+import org.popkit.appkit.common.log.AppkitLogger;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -35,6 +36,7 @@ public class AppkitConfigActor {
         } else {
             config.put(DEFAULT_SS_KEY, DEFAULT_LOG_FILE_NAME);
         }
+        AppkitLogger.info(DEFAULT_SS_KEY + ":" + config.get(DEFAULT_SS_KEY));
     }
 
     public static String getWebappsRoot() {
@@ -62,6 +64,7 @@ public class AppkitConfigActor {
                 }
             }
         } catch (IOException e) {
+            AppkitLogger.error("error", e);
             e.printStackTrace();
         } finally {
             try {
