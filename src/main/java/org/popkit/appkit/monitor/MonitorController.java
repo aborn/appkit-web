@@ -63,7 +63,10 @@ public class MonitorController extends BaseController {
         }
 
         EachLine eachLine = new EachLine(labels, data);
-        List<EachLogItem> logItems = readLogFileContent(getDateTime(timeValue));
+        DateTime dateTime = getDateTime(timeValue);
+        AppkitLogger.info("before readLogFileContent");
+        List<EachLogItem> logItems = readLogFileContent(dateTime);
+        AppkitLogger.info("end readLogFileContent");
 
         doStatistics(logItems, labels, data, 10);
         eachLine.setLabel(getDateTime(timeValue).toString(DateTimeFormat.forPattern("yyyy-MM-dd")));
@@ -133,7 +136,12 @@ public class MonitorController extends BaseController {
     }
 
     private DateTime getDateTime(String dateString) {
-        return DateTime.parse(dateString, LOG_DATE_FORMAT);
+        try {
+            return DateTime.parse(dateString, LOG_DATE_FORMAT);
+        } catch (Exception e) {
+            AppkitLogger.error("DateTime.parse(" +dateString+ ", " + LOG_DATE_FORMAT+ ")", e);
+            return null;
+        }
     }
 
     List<String> buildLabels(String monitorDayString) {
