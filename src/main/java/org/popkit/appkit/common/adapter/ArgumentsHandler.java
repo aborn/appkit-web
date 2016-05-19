@@ -36,6 +36,6 @@ public class ArgumentsHandler implements HandlerMethodArgumentResolver {
             return new ArgReq(id, name);
         }
 
-        return null;
+        return webRequest.getParameter(parameter.getParameterName());
     }
 }
