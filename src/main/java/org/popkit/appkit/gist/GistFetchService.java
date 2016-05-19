@@ -72,6 +72,7 @@ public class GistFetchService {
             if (fetchEventMap.containsKey(pkgName)) {
                 return;
             }
+            fetchEventMap.put(pkgName, new FetchEvent(new Date()));
 
             new Thread(new Runnable() {
                 @Override
@@ -80,7 +81,7 @@ public class GistFetchService {
                     create(pkgName, remote_url);
                     AppkitLogger.info("finished fetch package now, pkgName:" + pkgName);
                 }
-            });
+            }).start();
         }
     }
 
