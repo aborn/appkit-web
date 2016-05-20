@@ -3,7 +3,10 @@ package org.popkit.appkit.gist;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.PullCommand;
 import org.eclipse.jgit.api.PullResult;
+import org.eclipse.jgit.lib.Constants;
 import org.eclipse.jgit.lib.Repository;
+import org.eclipse.jgit.revwalk.RevCommit;
+import org.eclipse.jgit.revwalk.RevWalk;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 import org.popkit.appkit.common.log.AppkitLogger;
 import org.springframework.stereotype.Service;
@@ -24,28 +27,6 @@ public class GistFetchService {
 
     public static String getGistFetchRootPath() {
         return System.getProperty("user.home") + "/" + LOCAL_PATH + "/";
-    }
-
-    private void update(String pkgName) {
-        try {
-            String localPath = getGistFetchRootPath() + pkgName;
-            Repository repository = FileRepositoryBuilder.create(new File(localPath + "/.git"));
-            //System.out.println("Starting fetch");
-
-            Git git = new Git(repository);
-            PullCommand pullCommand = git.pull();
-            PullResult result = pullCommand.call();
-
-            // http://stackoverflow.com/questions/13399990/usage-of-pull-command-in-jgit
-            //FetchResult fetchResult = result.getFetchResult();
-            //MergeResult mergeResult = result.getMergeResult();
-            //mergeResult.getMergeStatus();  // this should be interesting
-
-            //FetchResult result = git.fetch().setCheckFetchedObjects(true).call();
-            //System.out.println("Messages: " + result.getMessages());
-        } catch (Exception e) {
-            AppkitLogger.info("exception in update(" + pkgName + ")", e);
-        }
     }
 
     public void fetch(final String pkgName, final String remote_url) {
@@ -82,6 +63,45 @@ public class GistFetchService {
                     AppkitLogger.info("finished fetch package now, pkgName:" + pkgName);
                 }
             }).start();
+        }
+    }
+
+    public static long getLastCommiterTime(String pkgName) {
+        try {
+            String workingPath = getGistFetchRootPath() + pkgName;
+            Repository repository = FileRepositoryBuilder.create(new File(workingPath + "/.git"));
+            RevWalk revWalk = new RevWalk( repository );
+            revWalk.markStart( revWalk.parseCommit(repository.resolve(Constants.HEAD)));
+            // revWalk.sort(RevSort.COMMIT_TIME_DESC );
+            // revWalk.sort(RevSort.REVERSE, false);
+            RevCommit commit = revWalk.next();
+            revWalk.dispose();
+            return commit.getCommitterIdent().getWhen().getTime();
+        } catch (Exception e) {
+            AppkitLogger.warn("exception in getLastCommiterTime", e);
+        }
+        return 0;
+    }
+
+    private void update(String pkgName) {
+        try {
+            String localPath = getGistFetchRootPath() + pkgName;
+            Repository repository = FileRepositoryBuilder.create(new File(localPath + "/.git"));
+            //System.out.println("Starting fetch");
+
+            Git git = new Git(repository);
+            PullCommand pullCommand = git.pull();
+            PullResult result = pullCommand.call();
+
+            // http://stackoverflow.com/questions/13399990/usage-of-pull-command-in-jgit
+            //FetchResult fetchResult = result.getFetchResult();
+            //MergeResult mergeResult = result.getMergeResult();
+            //mergeResult.getMergeStatus();  // this should be interesting
+
+            //FetchResult result = git.fetch().setCheckFetchedObjects(true).call();
+            //System.out.println("Messages: " + result.getMessages());
+        } catch (Exception e) {
+            AppkitLogger.info("exception in update(" + pkgName + ")", e);
         }
     }
 
