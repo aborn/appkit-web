@@ -52,8 +52,22 @@ public class GistController {
             if (lastCommit > 0) {
                 jsonObject.put("lastCommitFormat", new SimpleDateFormat("yyyy-MM-dd hh:mm").format(lastCommit));
             }
+            jsonObject.put("pkgFile", getPkgFileName(pkgName));
         }
         ResponseUtils.renderJson(response, jsonObject.toJSONString());
+    }
+
+    private String getPkgFileName(String pkgName) {
+        File pkgPath = new File(GistFetchService.getGistFetchRootPath() + pkgName);
+        if (pkgPath.isDirectory()) {
+            for (File elispFile : pkgPath.listFiles()) {
+                if (elispFile.isFile() && elispFile.getName().endsWith(".el")
+                        && (!elispFile.getName().startsWith("."))) {
+                    return "/" + pkgPath.getName() + "/" + elispFile.getName();
+                }
+            }
+        }
+        return "";
     }
 
     @RequestMapping(value = "list.json")
