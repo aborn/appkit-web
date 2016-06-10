@@ -56,7 +56,7 @@ public class MonitorController extends BaseController {
         }
         List<String> labels = buildLabels(timeValue);
         List<Integer> data = new ArrayList<Integer>();
-        for (String item : labels) {
+        for (int i=0; i<labels.size(); i++) {
             data.add(0);
         }
 
