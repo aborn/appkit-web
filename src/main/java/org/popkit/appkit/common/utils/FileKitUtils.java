@@ -5,6 +5,7 @@ import org.apache.commons.lang.StringUtils;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.zip.GZIPOutputStream;
 
 /**
  * @author aborn.jiang
@@ -12,7 +13,31 @@ import java.net.URL;
  * @date 04-15-2015
  * @time 2:02 PM
  */
-public class FileUtils {
+public class FileKitUtils {
+
+    private FileKitUtils() {}
+
+    /**
+     * 文件流方式压缩,无需要将整个文件load到内存中
+     * @param src 原始文件名 /Users/aborn/abc.txt
+     * @param dest 压缩后文件名 /Users/aborn/abc.out
+     */
+    public static void gzip(String src, String dest) throws IOException {
+        FileInputStream fis = new FileInputStream(src);  // 原始文件
+        GZIPOutputStream gzos = new GZIPOutputStream(new FileOutputStream(dest));  // 压缩后文件
+
+        byte[] buffer = new byte[1024];  // 每次读入到内存中的大小
+        int len;
+        while((len=fis.read(buffer)) != -1) {
+            gzos.write(buffer, 0, len);
+        }
+
+        fis.close();
+        gzos.finish();
+        gzos.close();
+
+        //byte[] compressFileBytes = IOUtils.toByteArray(new FileInputStream("/Users/aborn/abc.out"));
+    }
 
     /**
      * 删除文件夹下所有文件

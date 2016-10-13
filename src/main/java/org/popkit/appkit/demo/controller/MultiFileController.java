@@ -6,7 +6,7 @@ import org.apache.commons.lang.StringUtils;
 import org.popkit.appkit.common.controller.BaseController;
 import org.popkit.appkit.common.entity.ResponseJSON;
 import org.popkit.appkit.common.utils.AppKitUtils;
-import org.popkit.appkit.common.utils.FileUtils;
+import org.popkit.appkit.common.utils.FileKitUtils;
 import org.popkit.appkit.common.utils.ResponseUtils;
 import org.popkit.appkit.demo.entity.FileInfo;
 import org.springframework.stereotype.Controller;
@@ -70,7 +70,7 @@ public class MultiFileController extends BaseController {
             //2.3 create new FileInfo
             FileInfo = new FileInfo();
             FileInfo.setName(mpf.getOriginalFilename());
-            FileInfo.setSize(FileUtils.humanReadableByteCount(mpf.getSize(), true));
+            FileInfo.setSize(FileKitUtils.humanReadableByteCount(mpf.getSize(), true));
             //FileInfo.setSize(mpf.getSize()+"");
             FileInfo.setType(mpf.getContentType());
 
@@ -78,7 +78,7 @@ public class MultiFileController extends BaseController {
                 FileInfo.setBytes(mpf.getBytes());
 
                 // copy file to local disk (make sure the path "e.g. D:/temp/files" exists)
-                if (FileUtils.createDirectory(imageFileDir)) {
+                if (FileKitUtils.createDirectory(imageFileDir)) {
                     FileCopyUtils.copy(mpf.getBytes(), new FileOutputStream(imageFileDir + mpf.getOriginalFilename()));
                 }
 
