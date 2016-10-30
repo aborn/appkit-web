@@ -10,6 +10,7 @@ import org.popkit.appkit.common.entity.ResponseJSON;
 import org.popkit.appkit.common.utils.ResponseUtils;
 import org.popkit.appkit.demo.entity.*;
 import org.popkit.appkit.demo.service.DemoService;
+import org.popkit.appkit.demo.service.ExecuteCmdService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -37,6 +38,9 @@ public class DemoController extends BaseController {
 
     @Autowired
     private DemoService demoService;
+
+    @Autowired
+    private ExecuteCmdService executeCmdService;
 
     /**
      * Dynamic uri example
@@ -215,5 +219,13 @@ public class DemoController extends BaseController {
     @RequestMapping("demo.html")
     public String demo() {
         return "demo/demo";
+    }
+
+    @RequestMapping("execute")
+    public void execute(HttpServletResponse response) {
+        executeCmdService.go();
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("status", "success");
+        ResponseUtils.renderJson(response, jsonObject.toJSONString());
     }
 }
