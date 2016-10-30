@@ -20,7 +20,7 @@ public class ExecuteTask extends Thread {
 
     @Override
     public void run() {
-        Callable<ExecuteStatus> demeTask = new Callable<ExecuteStatus>() {
+        Callable<ExecuteStatus> demoTask = new Callable<ExecuteStatus>() {
             @Override
             public ExecuteStatus call() throws Exception {
                 long beginTime = System.currentTimeMillis();
@@ -39,7 +39,7 @@ public class ExecuteTask extends Thread {
         };
 
         ExecutorService service = Executors.newSingleThreadExecutor();
-        Future<ExecuteStatus> future = service.submit(demeTask);
+        Future<ExecuteStatus> future = service.submit(demoTask);
 
         //new Thread(futureTask).run();
         //futureTask.run();
