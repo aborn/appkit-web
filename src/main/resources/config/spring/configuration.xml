@@ -5,6 +5,7 @@
 
 <configuration>
     <mappers>
+        <mapper resource="config/sqlmap/mapper/RecordsMapper.xml"/>
         <mapper resource="config/sqlmap/sqlmap-demo.xml"/>
     </mappers>
 </configuration>

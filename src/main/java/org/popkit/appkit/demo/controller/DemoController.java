@@ -9,6 +9,7 @@ import org.popkit.appkit.common.controller.BaseController;
 import org.popkit.appkit.common.entity.ResponseJSON;
 import org.popkit.appkit.common.utils.ResponseUtils;
 import org.popkit.appkit.demo.entity.*;
+import org.popkit.appkit.demo.mapper.RecordsMapper;
 import org.popkit.appkit.demo.service.DemoService;
 import org.popkit.appkit.demo.service.ExecuteCmdService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +43,14 @@ public class DemoController extends BaseController {
     @Autowired
     private ExecuteCmdService executeCmdService;
 
+    @Autowired
+    private RecordsMapper recordsMapper;
+
+    @RequestMapping(value = "test.json")
+    public void test(HttpServletResponse response) {
+        Records records = recordsMapper.selectByPrimaryKey(1);
+        ResponseUtils.renderJson(response, JSONObject.toJSONString(records));
+    }
     /**
      * Dynamic uri example
      * @param modelMap variable to view layer
