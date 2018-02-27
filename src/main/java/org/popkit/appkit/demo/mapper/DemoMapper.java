@@ -6,7 +6,8 @@ import java.util.List;
 
 /**
  * Like ibatis's DAO
- * @author guobao.jiang
+ * @author aborn.jiang
+ * @email aborn.jiang@foxmail.com
  * @date 3/15/15
  * @time 4:00 PM
  */

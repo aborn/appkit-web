@@ -13,8 +13,8 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * @author guobao.jiang
- * @email guobao.jiang@dianping.com
+ * @author aborn.jiang
+ * @email aborn.jiang@foxmail.com
  * @date 09-30-2015
  * @time 2:22 PM
  */

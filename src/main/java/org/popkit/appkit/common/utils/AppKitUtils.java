@@ -3,7 +3,8 @@ package org.popkit.appkit.common.utils;
 import org.apache.commons.lang.StringUtils;
 
 /**
- * @author guobao.jiang
+ * @author Aborn Jiang
+ * @email aborn.jiang@foxmail.com
  * @date 3/13/15
  * @time 12:23 AM
  */

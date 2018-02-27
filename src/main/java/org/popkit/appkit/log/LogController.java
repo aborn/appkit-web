@@ -14,8 +14,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @author guobao.jiang
- * @email guobao.jiang@dianping.com
+ * @author aborn.jiang
+ * @email aborn.jiang@foxmail.com
  * @date 08-03-2015
  * @time 11:20 PM
  */

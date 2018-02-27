@@ -5,8 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * @author guobao.jiang
- * @email guobao.jiang@dianping.com
+ * @author aborn.jiang
+ * @email aborn.jiang@foxmail.com
  * @date 09-27-2015
  * @time 10:36 PM
  */

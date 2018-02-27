@@ -12,7 +12,8 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @author guobao.jiang
+ * @author Aborn Jiang
+ * @email aborn.jiang@foxmail.com
  * @date 3/15/15
  * @time 4:06 PM
  */

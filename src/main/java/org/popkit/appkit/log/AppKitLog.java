@@ -4,8 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author guobao.jiang
- * @email guobao.jiang@dianping.com
+ * @author aborn.jiang
+ * @email aborn.jiang@foxmail.com
  * @date 08-03-2015
  * @time 11:04 PM
  */
